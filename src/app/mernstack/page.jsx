@@ -1,7 +1,8 @@
 "use client"
+
 import { ChevronRight } from "lucide-react";
 import React from "react";
-import { TechShowcase } from "./Techstack/page";
+// import { TechShowcase } from "./Techstack/page";
 import ContactForm from "../Sections/ContactForm/page";
 import WhyMern from "./WhyMern/page";
 import ProjectsSection from "../Sections/ProjectsSection/page";
@@ -9,7 +10,7 @@ import WhyModernStack from "./WhyModernStack/page";
 import { motion } from 'framer-motion';
 import { blurInVariant } from "../utils/blurInVariant";
 
-const mernstack = () => {
+const MernStack = () => {
   return (
     <main className="w-full h-auto relative ">
       <div className="h-[100vh] md:h-full flex flex-col gap-10 md:gap-0  justify-center">
@@ -73,7 +74,7 @@ const mernstack = () => {
         <h2 className="text-xl">ARAFA TECH STACK</h2>
         <span className="text-gray-400">From next-gen startups to established businesses.</span>
       </div>
-      <TechShowcase />
+      {/* <TechShowcase /> */}
       <WhyMern/>
       <ProjectsSection />
       <ContactForm/>
@@ -83,4 +84,4 @@ const mernstack = () => {
   );
 };
 
-export default mernstack;
+export default MernStack;

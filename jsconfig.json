@@ -5,6 +5,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["**/*.js", "**/*.jsx", "src/app/mernstack/Techstack/page.jsx"],
+  "include": ["**/*.js", "**/*.jsx", "src/app/mernstack/_Techstack/page.jsx"],
   "exclude": ["node_modules"]
 }
