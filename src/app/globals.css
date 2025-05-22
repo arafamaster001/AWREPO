@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --gray-color:#09090B; */
+  --gray-color: rgb(156, 150, 150);
+  --main-bg-color: #000000;
+  --white-color: #ffffff;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Tektur", sans-serif;
+}
+body {
+  background: var(--main-bg-color);
+  color: white;
+  overflow-x: hidden;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.para {
+  display: block;
+  overflow: hidden;
+  font-size: 1.5rem;
+  @apply leading-[2rem] lg:leading-[3rem]
+}
+
+/* ===== Global Configuration */
+
+.gp {
+  padding: 2% 5%;
+}
+.gpp {
+  padding: 10% 5%;
+}
+.main_back {
+  background: var(--main-bg-color);
+}
+.sub_heading {
+  @apply text-5xl font-bold;
+}
+.text_border {
+  -webkit-text-stroke: 2px var(--gray-color);
+  text-shadow: 0px 4px 1px rgb(173, 164, 164);
+}
+.point {
+  @apply text-2xl;
+}
+.service_btn {
+  @apply py-1 px-6 rounded-xl;
+}
+nav {
+  height: 3.5rem;
+  border-bottom: 1px dashed #353434;
+}
+.text_container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.char_container {
+  position: relative;
+}
+.char_container span {
+  display: inline-block;
+  white-space: pre;
+  transition-duration: 0.3s;
+}
+.char_container span:last-child {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+}
+.main_btn {
+  background-color: var(--white-color);
+  color: var(--main-bg-color);
+  @apply py-1 px-3 rounded-md;
+}
+.web_btn {
+  background-color: var(--main-bg-color-color);
+  color: var(--white-color-color);
+  @apply py-1 px-3 rounded-md border-white/20 border;
+}
+
+.nav_link {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+}
+
+.nav_link span {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.nav_link::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.nav_link:hover span {
+  transform: translateY(-100%);
+}
+
+.nav_link:hover::before {
+  transform: translateY(-100%);
+}
+
+/* ====== Hero Section ====== */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(6deg);
+  }
+}
+
+/* Required styles for hidden start and smooth animation */
+.quote .char {
+  opacity: 0;
+  transform: translateY(80px);
+  display: inline-block;
+  margin: 0;
+}
+
+.split-line {
+  display: block;
+  overflow: hidden;
+  line-height: 1.4 !important;
+}
+.quote {
+  will-change: transform, opacity;
+  /* border: 1px solid white; */
+  height: auto;
+  overflow: visible;
+}
+
+/* ========Services Cards========= */
+.services_cards {
+  transition: all 0.1s;
+  @apply border-white/20  border-r flex flex-col  justify-center p-10 gap-10 relative anime;
+}
+.services_cards_1 {
+  transition: all 0.1s;
+  @apply border-white/20 border-r border-l flex flex-col  justify-center p-10 gap-10 relative anime;
+}
+
+.animate_service {
+  transition: all 0.1s;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 62%,
+    #000000c4 62%,
+    #000000 75%
+  );
+  @apply absolute w-full h-full left-0;
+}
+.anime:hover {
+  background-color: #ffffff09;
+  @apply border-white/20 border-t border-b;
+}
+.anime:hover .animate_service {
+  @apply opacity-0;
+}
+
+/* ======== Projrcts ========= */
+.project_numbering{
+  color: transparent;
+  /* -webkit-text-stroke: rgba(255, 255, 255, 0.295) 1px; */
+  -webkit-text-stroke: white 1px;
+}
+
+.form_input input{
+  outline: none;
+}
+/* ======== Mern Page =========*/
+.ms-box {
+  transform: rotateX(30deg) rotateY(15deg);
+  transform-style: preserve-3d;
+  width: 120%;
+  height: 100%;
+  /* border: white 1px solid; */
+  /* top: 300px; */
+}
+
+.ms-img {
+  left: 7%;
+  transform: rotateX(20deg) rotateZ(-20deg);
+  width: 200vw;
+  height: auto;
+  border-radius: 10px;
+  z-index: 0;
+}
+.zzz {
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%); */
+  background: 
+  linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%),
+  linear-gradient(to right, rgba(0,0,0,0) 20%, #000 100%);
+}
+.cards_bg{
+  background: 
+  linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 150%),
+  linear-gradient(to right, rgba(0,0,0,0) 15%, #000 100%);
+}
+.terminal_box{
+  background: 
+  linear-gradient(to bottom, rgba(0,0,0,0) 10%, #000 100%),
+  linear-gradient(to right, rgba(0,0,0,0) 10%, #000 90%);
+  top: 0;
+  left: 0;
+}
+.mern_cardss{
+  transform: rotateX(20deg) rotateZ(-20deg);
+  height: auto;
+  border-radius: 10px;
+  z-index: 0;
+}
+/* ========= Shopify ========= */
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========= Footer ========= */
+footer{
+  /* border-top: 1px dashed #353434; */
+  @apply border-white/20 border-t border-dashed
+}
+
+.footer_input{
+  outline: none;
+}
+
+
+@media (min-width: 640px){
+
+}
+@media (min-width: 768px){
+
+}
+@media (min-width: 1024px){
+
+}
+@media (min-width: 1280px){
+
+}
+@media (min-width: 1536px){
+ body{
+ }
+}

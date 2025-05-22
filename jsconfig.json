@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["**/*.js", "**/*.jsx", "src/app/mernstack/Techstack/page.jsx"],
+  "exclude": ["node_modules"]
+}
