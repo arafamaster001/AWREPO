@@ -1,7 +1,8 @@
 "use client"
 
-import { ChevronLeft, ChevronRight, CircleArrowRight } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 import React, { useRef, useState, useEffect } from "react"
+import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 export default function ProjectsSection() {
   const cards = [
@@ -279,7 +280,7 @@ export default function ProjectsSection() {
   const handleScroll = () => checkScrollability()
 
   return (
-    <main className="min-h-screen p-[5%] flex flex-col gap-10">
+    <main id="projects" className="min-h-screen p-[5%] flex flex-col gap-10">
       <div className="py-[2%]">
         <h1 className="sub_heading">Our Projects</h1>
       </div>
@@ -306,7 +307,7 @@ export default function ProjectsSection() {
               <div className="p-5 flex-1 flex flex-col h-full">
                 <div className=" flex-1"></div>
                 <div className=" flex flex-col gap-4">
-                  <div>koi 
+                  <div> 
                     <img src={card.img} alt="" className="w-full rounded-xl" />
                   </div>
                   <div>
@@ -316,7 +317,7 @@ export default function ProjectsSection() {
                   <div className="flex justify-between items-center">
                     <span className="text-white text-5xl project_numbering font-bold mt-2">{card.number}</span>
                     <a href={card.link} target="_blank">
-                      <CircleArrowRight className="w-10 rotate-45 hover:-rotate-45 duration-150 ease-linear h-10" />
+                      <IoArrowForwardCircleOutline className="w-10 text-white/20 rotate-45 hover:-rotate-45 duration-150 ease-linear h-10" />
                     </a>
                   </div>
                   {/* <div className="flex flex-col w-full items-end">

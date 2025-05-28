@@ -10,12 +10,32 @@ const Header = () => {
   const pathname = usePathname();
 
   const NavLinks = [
-    { label: "Home", path: "/" },
-    { label: "About Us", path: "/about" },
-    { label: "Services", path: "/services" },
-    { label: "Projects", path: "/projects" },
-    { label: "Blogs", path: "/blogs" },
+    { label: "Home", path: "landing" },
+    { label: "About Us", path: "about" },
+    { label: "Services", path: "services" },
+    { label: "Projects", path: "projects" },
+    // { label: "Blogs", path: "blogs" },
+    // { label: "Blogs", path: "blogs" }
   ];
+
+   // Function to scroll to a specific section with an offset
+  const scrollToSection = (id) => {
+    // If already on the home page, just scroll to the section
+    if (pathname === "/") {
+      const section = document.getElementById(id);
+      if (section) {
+        const offset = -70; // Adjust this value as needed
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: sectionTop + offset,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      // Navigate to the home page and then scroll to the section
+      window.location.href = `/#${id}`;
+    }
+  };
 
   const getTransformStyles = (isHovered, index) => ({
     transform: `translateY(${isHovered ? "-100%" : "0%"})`,
@@ -26,15 +46,16 @@ const Header = () => {
     <header className="fixed w-full z-20 bg-transparent" style={{ backdropFilter: "blur(20px)" }}>
       <nav className="px-[5%] flex items-center justify-between h-16">
         <div className="logo">
-          <span className="text-3xl font-bold">Arafa Webs</span>
+          <Link href={"/"} className="text-3xl font-bold">Arafa Webs</Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="nav_links hidden lg:flex items-center gap-6">
           {NavLinks.map((nav, navIndex) => (
-            <Link
+            <p
               key={nav.label}
-              href={nav.path}
+              // href={nav.path}
+                onClick={() => scrollToSection(nav.path)}
               onMouseEnter={() => setHoveredIndex(navIndex)}
               onMouseLeave={() => setHoveredIndex(null)}
               className={`text_container relative ${
@@ -51,7 +72,7 @@ const Header = () => {
                   </span>
                 </span>
               ))}
-            </Link>
+            </p>
           ))}
         </div>
 

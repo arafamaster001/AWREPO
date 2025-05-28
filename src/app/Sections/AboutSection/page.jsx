@@ -110,7 +110,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="w-full h-auto  lg:h-[100vh] py-[20%] px-[5%]  lg:p-[5%] relative" ref={containerRef}>
+    <section id="about" className="w-full h-auto  lg:h-[100vh] py-[20%] px-[5%]  lg:p-[5%] relative" ref={containerRef}>
       <div className="flex flex-col gap-6 relative z-10">
         <h2 className="sub_heading">About us</h2>
         <p className="para quote h-auto flex flex-col gap-3">

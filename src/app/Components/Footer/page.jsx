@@ -1,9 +1,34 @@
+"use client"
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
-import { FaLinkedin,FaGithub, FaDiscord } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 
 const Footer = () => {
+
+    const pathname = usePathname();
+  
+
+  const scrollToSection = (id) => {
+    // If already on the home page, just scroll to the section
+    if (pathname === "/") {
+      const section = document.getElementById(id);
+      if (section) {
+        const offset = -70; // Adjust this value as needed
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: sectionTop + offset,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      // Navigate to the home page and then scroll to the section
+      window.location.href = `/#${id}`;
+    }
+  };
+
   return (
     <footer className="w-full relative z-10">
       {/* <div className="absolute top-0 z-10 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.05),_transparent_70%)]"></div> */}
@@ -29,11 +54,11 @@ const Footer = () => {
         <div className="lg:col-span-1 flex flex-col gap-2">
           <span className="point">Quick Links</span>
           <div className="flex flex-col gap-2">
-            <Link href={"/"}>Home</Link>
-            <Link href={"/"}>About</Link>
-            <Link href={"/"}>Services</Link>
-            <Link href={"/"}>Projects</Link>
-            <Link href={"/"}>Blogs</Link>
+            <p onClick={() => scrollToSection("landing")} >Home</p>
+            <p onClick={() => scrollToSection("about")} >About</p>
+            <p onClick={() => scrollToSection("services")} >Services</p>
+            <p onClick={() => scrollToSection("projects")} >Projects</p>
+            {/* <Link href={"/"}>Blogs</Link> */}
           </div>
         </div>
         <div className="lg:col-span-1 flex flex-col gap-2">
@@ -65,10 +90,10 @@ const Footer = () => {
           </div>
           <div className="flex gap-10 lg:gap-5 items-center  justify-center">
             <span><FaLinkedin className="text-2xl" /></span>
-            <span><FaGithub className="text-2xl"/></span>
+            <span><FaGithub className="text-2xl" /></span>
             <span><RiTwitterXLine className="text-2xl" /></span>
-            <span><FaDiscord className="text-3xl"/></span>
-          
+            <span><FaDiscord className="text-3xl" /></span>
+
           </div>
         </div>
       </div>
