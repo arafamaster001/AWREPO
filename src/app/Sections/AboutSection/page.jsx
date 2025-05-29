@@ -1,116 +1,118 @@
-"use client";
+// "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import SplitText from "gsap-trial/SplitText";
-import ScrollTrigger from "gsap-trial/ScrollTrigger";
+// import { useEffect, useRef } from "react";
+// import gsap from "gsap";
+// import SplitText from "gsap-trial/SplitText";
+// import ScrollTrigger from "gsap-trial/ScrollTrigger";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+// gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const AboutSection = () => {
-  const containerRef = useRef(null);
+  // const containerRef = useRef(null);
 
-  useEffect(() => {
-    if (!containerRef.current) return;
+  // useEffect(() => {
+  //   if (!containerRef.current) return;
 
-    const quotes = containerRef.current.querySelectorAll(".quote");
-    const splitInstances = [];
-    const animations = [];
+  //   const quotes = containerRef.current.querySelectorAll(".quote");
+  //   const splitInstances = [];
+  //   const animations = [];
 
-    const setupSplits = () => {
-      // Clean up previous animations and splits first
-      animations.forEach((anim) => anim.kill());
-      splitInstances.forEach((split) => {
-        try {
-          if (split && split.revert) {
-            split.revert();
-          }
-        } catch (error) {
-          console.error("Error reverting split:", error);
-        }
-      });
+  //   const setupSplits = () => {
+  //     // Clean up previous animations and splits first
+  //     animations.forEach((anim) => anim.kill());
+  //     splitInstances.forEach((split) => {
+  //       try {
+  //         if (split && split.revert) {
+  //           split.revert();
+  //         }
+  //       } catch (error) {
+  //         console.error("Error reverting split:", error);
+  //       }
+  //     });
 
-      // Clear the arrays
-      animations.length = 0;
-      splitInstances.length = 0;
+  //     // Clear the arrays
+  //     animations.length = 0;
+  //     splitInstances.length = 0;
 
-      // Create new splits and animations
-      quotes.forEach((quote) => {
-        if (!quote) return;
+  //     // Create new splits and animations
+  //     quotes.forEach((quote) => {
+  //       if (!quote) return;
 
-        try {
-          // Create new SplitText instance
-          const split = new SplitText(quote, {
-            type: "words,chars",
-            linesClass: "split-line",
-          });
+  //       try {
+  //         // Create new SplitText instance
+  //         const split = new SplitText(quote, {
+  //           type: "words,chars",
+  //           linesClass: "split-line",
+  //         });
 
-          splitInstances.push(split);
+  //         splitInstances.push(split);
 
-          // Set initial styles for words
-          gsap.set(split.words, {
-            opacity: 0,
-            y: 40,
-            display: "inline-block",
-          });
+  //         // Set initial styles for words
+  //         gsap.set(split.words, {
+  //           opacity: 0,
+  //           y: 40,
+  //           display: "inline-block",
+  //         });
 
-          // Make quote visible immediately but with opacity 0 elements
-          quote.style.visibility = "visible";
+  //         // Make quote visible immediately but with opacity 0 elements
+  //         quote.style.visibility = "visible";
 
-          // Create smoother animation with better timing
-          const anim = gsap.to(split.words, {
-            scrollTrigger: {
-              trigger: quote,
-              toggleActions: "play none none reverse",
-              start: "top 60%",
-              end: "bottom 90%",
-              scrub: "true",
-            },
-            duration: 0.9,
-            ease: "power3.out",
-            y: 30,
-            opacity: 1,
-            stagger: 0.03,
-            force3D: true,
-          });
+  //         // Create smoother animation with better timing
+  //         const anim = gsap.to(split.words, {
+  //           scrollTrigger: {
+  //             trigger: quote,
+  //             toggleActions: "play none none reverse",
+  //             start: "top 60%",
+  //             end: "bottom 90%",
+  //             scrub: "true",
+  //           },
+  //           duration: 0.9,
+  //           ease: "power3.out",
+  //           y: 30,
+  //           opacity: 1,
+  //           stagger: 0.03,
+  //           force3D: true,
+  //         });
 
-          animations.push(anim);
-        } catch (error) {
-          console.error("Error setting up animation:", error);
-        }
-      });
-    };
+  //         animations.push(anim);
+  //       } catch (error) {
+  //         console.error("Error setting up animation:", error);
+  //       }
+  //     });
+  //   };
 
-    // Initial setup with a small delay to ensure DOM is ready
-    const initTimeout = setTimeout(() => {
-      setupSplits();
-    }, 100);
+  //   // Initial setup with a small delay to ensure DOM is ready
+  //   const initTimeout = setTimeout(() => {
+  //     setupSplits();
+  //   }, 100);
 
-    // Handle resize/refresh
-    ScrollTrigger.addEventListener("refresh", setupSplits);
+  //   // Handle resize/refresh
+  //   ScrollTrigger.addEventListener("refresh", setupSplits);
 
-    return () => {
-      clearTimeout(initTimeout);
-      ScrollTrigger.removeEventListener("refresh", setupSplits);
+  //   return () => {
+  //     clearTimeout(initTimeout);
+  //     ScrollTrigger.removeEventListener("refresh", setupSplits);
 
-      // Clean up animations
-      animations.forEach((anim) => anim && anim.kill());
+  //     // Clean up animations
+  //     animations.forEach((anim) => anim && anim.kill());
 
-      // Clean up splits
-      splitInstances.forEach((split) => {
-        try {
-          if (split && split.revert) {
-            split.revert();
-          }
-        } catch (error) {
-          console.error("Error cleaning up split:", error);
-        }
-      });
-    };
-  }, []);
+  //     // Clean up splits
+  //     splitInstances.forEach((split) => {
+  //       try {
+  //         if (split && split.revert) {
+  //           split.revert();
+  //         }
+  //       } catch (error) {
+  //         console.error("Error cleaning up split:", error);
+  //       }
+  //     });
+  //   };
+  // }, []);
 
   return (
-    <section id="about" className="w-full h-auto  lg:h-[100vh] py-[20%] px-[5%]  lg:p-[5%] relative" ref={containerRef}>
+    <section id="about" className="w-full h-auto  lg:h-[100vh] py-[20%] px-[5%]  lg:p-[5%] relative" 
+    // ref={containerRef}
+    >
       <div className="flex flex-col gap-6 relative z-10">
         <h2 className="sub_heading">About us</h2>
         <p className="para quote h-auto flex flex-col gap-3">
