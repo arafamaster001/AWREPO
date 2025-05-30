@@ -53,7 +53,7 @@
     }
 
     return (
-      <div className="w-full max-w-4xl mx-auto">
+      <div id="contactForm" className="w-full max-w-4xl mx-auto">
         <div className="bg-black border border-white/20 rounded-2xl overflow-hidden relative">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.05),_transparent_70%)]"></div>
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0">

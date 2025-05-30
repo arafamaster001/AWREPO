@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* --gray-color:#09090B; */
   --gray-color: rgb(156, 150, 150);

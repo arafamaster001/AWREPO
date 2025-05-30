@@ -3,8 +3,32 @@ import { useEffect, useRef } from "react";
 import EarthSection from "./EarthSection/page";
 import { motion } from 'framer-motion';
 import { blurInVariant } from "@/app/utils/blurInVariant";
+import { usePathname } from "next/navigation";
 
 const HeroSection = () => {
+
+    const pathname = usePathname();
+
+      // Function to scroll to a specific section with an offset
+  const scrollToSection = (id) => {
+    // If already on the home page, just scroll to the section
+    if (pathname === "/") {
+      const section = document.getElementById(id);
+      if (section) {
+        const offset = -70; // Adjust this value as needed
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: sectionTop + offset,
+          behavior: "smooth",
+        });
+      }
+    } else {
+      // Navigate to the home page and then scroll to the section
+      window.location.href = `/#${id}`;
+    }
+  };
+  
+
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -179,7 +203,9 @@ const HeroSection = () => {
         custom={1.4}
         className="mt-5 flex gap-3"
       >
-        <button className="bg-white text-black px-8 py-2 text-lg rounded-xl font-bold">Get Started</button>
+        <button
+        onClick={() => scrollToSection("contactForm")}
+        className="bg-white text-black px-8 py-2 text-lg rounded-xl font-bold">Get Started</button>
         <button className="bg-black text-white px-8 py-2 text-lg rounded-xl font-bold border-white/20 border">Explore More</button>
       </motion.div>
     </div>
