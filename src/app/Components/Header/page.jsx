@@ -78,7 +78,10 @@ const Header = () => {
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <button className="main_btn">Get Started</button>
+          <button
+        onClick={() => scrollToSection("contactForm")}
+          
+          className="main_btn">Get Started</button>
         </div>
 
         {/* Hamburger Toggle (Mobile) */}
@@ -120,7 +123,9 @@ const Header = () => {
             {nav.label}
           </Link>
         ))}
-        <button className="main_btn w-fit mt-4">Get Started</button>
+        <button
+        onClick={() => scrollToSection("contactForm")}
+        className="main_btn w-fit mt-4">Get Started</button>
       </div>
     </header>
   );
