@@ -6,6 +6,7 @@ import React from "react";
 import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 
+
 const Footer = () => {
 
     const pathname = usePathname();
