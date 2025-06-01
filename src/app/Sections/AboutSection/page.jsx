@@ -118,7 +118,7 @@ const AboutSection = () => {
         <p className="para quote h-auto flex flex-col gap-5">
           <span>
             {" "}
-            Arafa Webs is a specialized web development company founded in 2022,
+            Arafa Webs is a specialized web development company founded in 2020,
             focused on delivering high-quality, custom-built websites tailored
             to meet modern business needs.
           </span>{" "}
