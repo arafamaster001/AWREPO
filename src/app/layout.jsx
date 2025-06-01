@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./Components/Header/page";
 import Footer from "./Components/Footer/page";
+import { HeroUIProvider } from "@heroui/react";
+import SessionTracker from "./Components/SessionTracker";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,9 +36,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <HeroUIProvider>
+          <Header />
+          <SessionTracker />
+          {children}
+          <Footer />
+        </HeroUIProvider>
       </body>
     </html>
   );
