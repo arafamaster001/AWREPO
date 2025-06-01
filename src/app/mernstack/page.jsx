@@ -72,7 +72,7 @@ const MernStack = () => {
       </div>
       <div className="w-full  flex flex-col font-semibold items-center px-[5%] py-[2%]">
         <h2 className="text-xl">ARAFA TECH STACK</h2>
-        <span className="text-gray-400 text-center">From next-gen startups to established businesses.</span>
+        {/* <span className="text-gray-400 text-center">From next-gen startups to established businesses.</span> */}
       </div>
       <TechCase />
       <WhyModernStack />
