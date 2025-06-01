@@ -4,6 +4,7 @@ import EarthSection from "./EarthSection/page";
 import { motion } from "framer-motion";
 import { blurInVariant } from "@/app/utils/blurInVariant";
 import { usePathname } from "next/navigation";
+import MobileEarth from "./MobileEarth/page";
 
 const HeroSection = () => {
   const pathname = usePathname();
@@ -144,8 +145,9 @@ const HeroSection = () => {
   return (
     <main
       id="landing"
-      className="res_cont w-full h-auto  lg:h-[100vh] grid lg:grid-cols-2 items-center  lg:gap-0 relative  text-white px-[5%] py-[15%] lg:p-[5%] "
+      className="res_cont w-full h-auto  lg:h-[100vh] grid lg:grid-cols-2 items-center  lg:gap-0 relative  text-white  py-[15%] lg:p-[5%] "
     >
+      {/*  */}
       {/* Dust particles background */}
       <div className="absolute inset-0 z-0">
         <canvas ref={canvasRef} className="w-full h-full" />
@@ -171,7 +173,7 @@ const HeroSection = () => {
         </div>
       </div> */}
 
-      <div className="Hero_Content h-[80vh] flex flex-col gap-5 justify-center relative z-10 col-span-1 py-[10%]">
+      <div className="Hero_Content h-[80vh] flex flex-col gap-5 justify-center relative z-10 col-span-1 px-[5%] lg:px-0 py-[10%]">
         <motion.h1
           variants={blurInVariant}
           initial="hidden"
@@ -212,8 +214,13 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      <div className="col-span-1 relative flex justify-center items-center inset-0 h-auto">
-        <div className="rounded-full p-5 bg-black">
+      <div className="col-span-1 relative flex justify-center items-center  h-auto overflow-hidden">
+        <div className="flex justify-center">
+        <div className=" md:hidden w-full  overflow-hidden">
+          <MobileEarth />
+        </div>
+        </div>
+        <div className="rounded-full p-5 bg-black hidden md:block">
           <EarthSection />
         </div>
       </div>

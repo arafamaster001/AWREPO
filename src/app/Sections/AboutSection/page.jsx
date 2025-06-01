@@ -115,7 +115,7 @@ const AboutSection = () => {
     >
       <div className="flex flex-col gap-6 relative z-10">
         <h2 className="sub_heading">About us</h2>
-        <p className="para quote h-auto flex flex-col gap-3">
+        <p className="para quote h-auto flex flex-col gap-5">
           <span>
             {" "}
             Arafa Webs is a specialized web development company founded in 2022,

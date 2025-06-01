@@ -32,8 +32,8 @@ body {
 .para {
   display: block;
   overflow: hidden;
-  font-size: 1.5rem;
-  @apply leading-[2rem] lg:leading-[3rem]
+  /* font-size: 1.5rem; */
+  @apply leading-[2rem] lg:leading-[3.3rem] text-[1.1rem] lg:text-[1.5rem]
 }
 
 /* ===== Global Configuration */
@@ -160,11 +160,11 @@ nav {
 /* ========Services Cards========= */
 .services_cards {
   transition: all 0.1s;
-  @apply border-white/20  border-r flex flex-col  justify-center p-10 gap-10 relative anime;
+  @apply border-white/20   border-r flex flex-col  justify-center p-10 gap-10 relative anime;
 }
 .services_cards_1 {
   transition: all 0.1s;
-  @apply border-white/20 border-r border-l flex flex-col  justify-center p-10 gap-10 relative anime;
+  @apply border-white/20 border-r lg:border-l flex flex-col  justify-center p-10 gap-10 relative anime;
 }
 
 .animate_service {
@@ -176,11 +176,11 @@ nav {
     #000000c4 62%,
     #000000 75%
   );
-  @apply absolute w-full h-full left-0;
+  @apply absolute w-full h-full left-0 border-white/20 border-l lg:border-none;
 }
 .anime:hover {
   background-color: #ffffff09;
-  @apply border-white/20 border-t border-b;
+  @apply border-white/20 border-t border-b border-l;
 }
 .anime:hover .animate_service {
   @apply opacity-0;

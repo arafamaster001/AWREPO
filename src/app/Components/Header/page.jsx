@@ -128,12 +128,13 @@ const Header = () => {
           </div>
         </nav>
 
-        <div className={`fixed top-0 right-0 h-screen w-64 bg-black text-white px-6 py-10 flex flex-col gap-6 z-30 transform transition-transform duration-300 lg:hidden ${
+        <div className={`fixed top-0 right-0 h-screen w-full   bg-black text-white px-6 py-10 flex flex-col justify-between gap-6 z-30 transform transition-transform duration-300 lg:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}>
-          <div className="flex justify-end">
+          {/* <div className="flex justify-end">
             <button onClick={() => setIsOpen(false)} className="text-white text-xl"></button>
-          </div>
+          </div> */}
+          <div className="flex flex-col gap-5 py-[10%]">
           {NavLinks.map((nav) => (
             <button
               key={nav.label}
@@ -146,7 +147,8 @@ const Header = () => {
               {nav.label}
             </button>
           ))}
-          <button className="main_btn w-fit mt-4" onClick={() => {
+          </div>
+          <button className="main_btn  mt-4" onClick={() => {
             setIsOpen(false);
             setShowBookingForm(true);
           }}>Get Started</button>
