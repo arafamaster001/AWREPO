@@ -4,7 +4,7 @@ import { Zap, Shield, Rocket, Code } from "lucide-react"
 
 export default function WhyModernStack() {
   return (
-    <section className="bg-black text-white py-[10%] p-[5%]">
+    <section className="bg-black text-white py-[10%] p-[5%] overflow-hidden">
       <div className="container mx-auto ">
         <div className="">
           <div className="flex flex-col gap-12 lg:gap-0 lg:flex-row lg:justify-between">

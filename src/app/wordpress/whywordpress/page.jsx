@@ -81,7 +81,7 @@ export default function WhyWordpress() {
         {/* <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-gray-800 to-transparent transform rotate-12 hidden lg:block"></div> */}
 
         <div className="relative flex flex-col gap-3">
-          <span className="text-gray-400">[ Why Shopify ]</span>
+          <span className="text-gray-400">[ Why Wordpress ]</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Wordpress.</h2>
           {/* <div className="h-px w-24 bg-gradient-to-r from-gray-500 to-transparent"></div> */}
         </div>

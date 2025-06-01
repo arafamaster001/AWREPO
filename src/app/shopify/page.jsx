@@ -15,7 +15,7 @@ const Shopify = () => {
   return (
     <>
       <section>
-        <div className="p-[5%] grid grid-cols-1 lg:grid-cols-2 min-h-[100vh] relative">
+        <div className="p-[5%] grid grid-cols-1 lg:grid-cols-2 gap-12 min-h-[100vh] relative">
           <div className="absolute top-20 right-32 w-16 h-16 border border-white/20 rounded-full" />
           <div className="absolute bottom-10 left-10 text-xs md:text-sm font-mono text-white/10 leading-relaxed hidden md:block">
             {`{

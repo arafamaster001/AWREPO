@@ -145,7 +145,7 @@ const HeroSection = () => {
   return (
     <main
       id="landing"
-      className="res_cont w-full h-auto  lg:h-[100vh] grid lg:grid-cols-2 items-center  lg:gap-0 relative  text-white  py-[15%] lg:p-[5%] "
+      className="res_cont w-full h-auto  lg:h-[100vh] grid lg:grid-cols-2 items-center  lg:gap-0 relative  text-white  pt-[15%] lg:p-[5%] "
     >
       {/*  */}
       {/* Dust particles background */}
@@ -216,7 +216,7 @@ const HeroSection = () => {
 
       <div className="col-span-1 relative flex justify-center items-center  h-auto overflow-hidden">
         <div className="flex justify-center">
-        <div className=" md:hidden w-full  overflow-hidden">
+        <div className=" md:hidden w-full  overflow-hidden h-[500px]">
           <MobileEarth />
         </div>
         </div>

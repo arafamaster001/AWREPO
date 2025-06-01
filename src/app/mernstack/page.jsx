@@ -59,7 +59,7 @@ const MernStack = () => {
         </div>
       </div> */}
       <div className="relative w-full overflow-hidden">
-        <div className="absolute h-[40vh]  md:h-[110vh] w-[100vw] top-[10%] z-10 zzz"></div>
+        <div className="absolute h-[40vh]  md:h-[115vh] w-[100vw] top-[10%] z-10 zzz"></div>
         <div className="ms-box z-1 ">
           <img
             src="/images/mernstack.png"

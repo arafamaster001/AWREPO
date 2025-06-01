@@ -16,7 +16,7 @@ const WordPress = () => {
   return (
     <>
     <section>
-      <div className="p-[5%] grid  grid-cols-1 lg:grid-cols-2 min-h-[100vh] relative">
+      <div className="p-[5%] grid  grid-cols-1 lg:grid-cols-2 gap-12 min-h-[100vh] relative">
        
         {/* <div className=" col-span-1 w-full h-full pt-[20%] lg:pt-[10%] relative flex flex-col gap-4">
           <span className="text-gray-400 text">[ WordPress ]</span>

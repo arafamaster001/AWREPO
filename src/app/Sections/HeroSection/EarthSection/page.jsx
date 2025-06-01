@@ -38,8 +38,8 @@ export default function EarthSection() {
           camera={{ position: [5, 5, 10], fov: 10 }} // Adjusted camera position
         >
           {/* Lights for visibility */}
-          <ambientLight intensity={3} />
-          <hemisphereLight intensity={1} groundColor="#000000" />
+          <ambientLight intensity={5} />
+          <hemisphereLight intensity={2} groundColor="#000000" />
           {/* <pointLight intensity={5} position={[10, 10, 10]} /> */}
           <spotLight
             position={[-20, 50, 10]}
