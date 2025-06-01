@@ -1,14 +1,10 @@
 "use client";
 
 import {
-  BadgeDollarSign,
+  Earth,
   Home,
   LockKeyhole,
   LogOut,
-  Settings,
-  ShoppingBag,
-  ShoppingCart,
-  Warehouse,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -20,56 +16,34 @@ const SideBar = () => {
   const navItems = [
     {
       href: "/admin/dashboard",
-      icon: <Home className="w-5 h-5" />,
+      icon: <Home className="w-6 h-6" />,
       label: "Dashboard",
     },
     {
-      href: "/admin/product",
-      icon: <ShoppingCart className="w-5 h-5" />,
-      label: "Upload Product",
-    },
-    {
-      href: "/admin/sale",
-      icon: <BadgeDollarSign className="w-5 h-5" />,
-      label: "Sales",
-    },
-    {
-      href: "/admin/purchase",
-      icon: <ShoppingBag className="w-5 h-5" />,
-      label: "Orders",
-    },
-    {
-      href: "/admin/stocks",
-      icon: <Warehouse className="w-5 h-5" />,
-      label: "Stocks",
-    },
-    {
-      href: "/admin/settings",
-      icon: <Settings className="w-5 h-5" />,
-      label: "Settings",
+      href: "/admin/visitors",
+      icon: <Earth className="w-6 h-6" />,
+      label: "Visitor",
     },
     {
       href: "/admin/logout",
-      icon: <LogOut className="w-5 h-5" />,
+      icon: <LogOut className="w-6 h-6" />,
       label: "Logout",
     },
   ];
 
   return (
-    <aside className="col-span-2 bg-white/80 backdrop-blur-xl border-r border-gray-200 shadow-xl p-6 flex flex-col h-screen sticky top-0">
-      <div className="mb-10">
-        <h1 className="text-2xl font-semibold text-slate-800 flex items-center gap-3 whitespace-nowrap">
-          <span className="p-2 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-800 shadow-md">
-            <LockKeyhole className="w-5 h-5 text-white" />
+    <aside className="col-span-2 bg-gradient-to-b from-gray-900 via-gray-950 to-black border-r border-gray-800 shadow-lg p-6 flex flex-col h-screen sticky top-0">
+      <div className="mb-12">
+        <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 flex items-center gap-4 whitespace-nowrap select-none">
+          <span className="p-3 rounded-full bg-gradient-to-tr from-indigo-700 to-purple-700 shadow-lg">
+            <LockKeyhole className="w-6 h-6 text-white" />
           </span>
-          <span className="text-transparent bg-clip-text font-[1.1rem] bg-gradient-to-r from-indigo-700 to-slate-800">
-            Admin Panel
-          </span>
+          Admin
         </h1>
       </div>
 
       {/* Navigation Links */}
-      <nav className="space-y-2 flex-1">
+      <nav className="space-y-3 flex-1">
         {navItems.map(({ href, icon, label }) => {
           const isActive = pathname === href;
 
@@ -77,19 +51,20 @@ const SideBar = () => {
             <Link
               key={href}
               href={href}
-              className={`flex items-center gap-4 px-5 py-3 text-[15px] font-medium rounded-xl transition-all duration-200 group
+              className={`flex items-center gap-5 px-6 py-3 rounded-xl font-semibold text-lg transition-all duration-300 select-none
                 ${
                   isActive
-                    ? "bg-indigo-100 text-indigo-700 shadow-inner"
-                    : "text-slate-600 hover:bg-slate-100 hover:text-indigo-600"
+                    ? "bg-indigo-600 text-white shadow-[0_0_10px_rgb(99,102,241)]"
+                    : "text-gray-400 hover:bg-indigo-700 hover:text-white hover:shadow-lg"
                 }`}
+              aria-current={isActive ? "page" : undefined}
             >
               <span
-                className={`${
+                className={`transition-transform duration-300 ${
                   isActive
-                    ? "text-indigo-700"
-                    : "text-slate-500 group-hover:text-indigo-600"
-                }`}
+                    ? "text-white"
+                    : "text-gray-500 group-hover:text-indigo-300"
+                } hover:scale-110`}
               >
                 {icon}
               </span>
@@ -99,8 +74,8 @@ const SideBar = () => {
         })}
       </nav>
 
-      {/* Optional Footer Section (User, Logo, Version) */}
-      <div className="mt-10 text-xs text-slate-400 text-center">
+      {/* Footer */}
+      <div className="mt-12 text-xs text-gray-500 text-center select-none">
         © 2025 Arafa-Webs Inc.
       </div>
     </aside>
