@@ -1,5 +1,6 @@
 import React from "react";
-import SideBar from "../components/sidebar";
+import SideBar from "../Components/Sidebar";
+
 
 const layout = ({ children }) => {
   return (
