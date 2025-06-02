@@ -15,7 +15,7 @@ const Header = () => {
   const NavLinks = [
     { label: "Home", path: "landing" },
     { label: "About Us", path: "about" },
-    { label: "Services", path: "services" },
+    { label: "Services", path: "" },
     { label: "Projects", path: "projects" },
   ];
 
@@ -115,11 +115,11 @@ const Header = () => {
                       </span>
                     ))}
                   </span>
-                   <span className="dropdown_container">
-                      <span>
-                        <span>Service 1</span>
-                        <span>Service 2</span>
-                        <span>Service 3</span>
+                   <span className="dropdown_container bg-black top-11  right-[] left-[-52vw] z-0 ">
+                      <span className="w-full px-[5%] py-[2%] h-full flex gap-10 font-bold">
+                        <Link href={"/mernstack"}>Mern Stack</Link>
+                        <Link href={"/shopify"}>Shopify</Link>
+                        <Link href={"/wordpress"}>Wordpress</Link>
                       </span>
                     </span>
                 </p>

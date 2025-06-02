@@ -496,27 +496,27 @@ footer{
 
 /* Base dropdown styles */
 .dropdown_container {
-  display: none;
+  opacity: 0;
   visibility: hidden;
-  background-color: red;
-  color: white;
-  position: absolute; /* Ensures dropdown overlays correctly */
-  z-index: 1000; /* Keeps it on top */
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-  top: 25px;
+  width: 100vw;
+  background-color: black;
+  /* border-bottom: 1px solid gray; */
+  position: absolute; 
+
+  padding: 0.5rem 0rem;
+  transition: all 0.5s ease;
+  @apply border-white/20 border-b border-dashed
+  
 }
 
 /* Parent hover effect */
-#navmanu_3:hover {
-  color: red;
-  position: relative; /* Needed for absolute dropdown */
+#navmanu_3{
+  /* position: relative;  */
 }
 
 /* Show dropdown on hover */
 #navmanu_3:hover .dropdown_container {
-  display: block;
-  visibility: visible;
-  background-color: white;
-  color: red;
+ opacity: 1;
+  visibility: visible; 
+ 
 }
