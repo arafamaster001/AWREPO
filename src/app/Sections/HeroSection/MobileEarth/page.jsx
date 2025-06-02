@@ -9,11 +9,11 @@ function RotatingEarth({ rotationSpeed }) {
   const earthRef = useRef();
   const { scene } = useGLTF("/models/earth/scene.gltf");
 
-  useFrame(() => {
-    if (earthRef.current) {
-      earthRef.current.rotation.y += rotationSpeed;
-    }
-  });
+  // useFrame(() => {
+  //   if (earthRef.current) {
+  //     earthRef.current.rotation.y += rotationSpeed;
+  //   }
+  // });
 
   return (
     <primitive
@@ -63,7 +63,7 @@ export default function MobileEarth() {
           />
 
           {/* 3D Earth */}
-          <RotatingEarth rotationSpeed={rotationSpeed} />
+          <RotatingEarth  />
 
           {/* Controls (locked except horizontal view) */}
           <OrbitControls

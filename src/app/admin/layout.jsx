@@ -1,6 +1,4 @@
-// src/app/admin/layout.jsx
-"use client";  // <-- add this line to make it a client component
-
+"use client";  
 import React, { useEffect } from "react";
 import SideBar from "../Components/Sidebar";
 import { usePathname } from "next/navigation";
@@ -20,7 +18,7 @@ export default function Layout({ children }) {
     <div className="grid grid-cols-12 min-h-screen">
     
       <SideBar />
-      <div className="col-span-9 p-4">{children}</div>
+      <div className="col-span-8 p-4">{children}</div>
     </div>
   );
 }
