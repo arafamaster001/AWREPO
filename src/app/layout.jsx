@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "./Components/Header/page";
 import Footer from "./Components/Footer/page";
 import { HeroUIProvider } from "@heroui/react";
-import SessionTracker from "./Components/SessionTracker";
+// import SessionTracker from "./Components/SessionTracker";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
       >
         <HeroUIProvider>
           <Header />
-          <SessionTracker />
+          {/* <SessionTracker /> */}
           {children}
           <Footer />
         </HeroUIProvider>
