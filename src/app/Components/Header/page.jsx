@@ -103,7 +103,7 @@ const Header = () => {
                     pathname === nav.path ? " font-semibold" : "text-white"
                   }`}
                 >
-                  <div className="overflow-hidden">
+                  <span className="overflow-hidden">
                     {splitStringUsingRegex(nav.label).map((character, index) => (
                       <span className="char_container inline-block" key={index}>
                         <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
@@ -114,14 +114,14 @@ const Header = () => {
                         </span>
                       </span>
                     ))}
-                  </div>
-                   <div className="dropdown_container w-full opacity-0 top-5 bg-white text-black absolute">
-                      <ul>
-                        <li>Service 1</li>
-                        <li>Service 2</li>
-                        <li>Service 3</li>
-                      </ul>
-                    </div>
+                  </span>
+                   <span className="dropdown_container">
+                      <span>
+                        <span>Service 1</span>
+                        <span>Service 2</span>
+                        <span>Service 3</span>
+                      </span>
+                    </span>
                 </p>
 
               ))}
