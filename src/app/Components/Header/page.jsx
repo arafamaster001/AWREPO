@@ -98,7 +98,7 @@ const Header = () => {
                 onMouseEnter={() => setHoveredIndex(navIndex)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className={`text_container relative cursor-pointer ${
-                  pathname === nav.path ? " font-semibold" : "text-white"
+                  pathname === nav.path ? "font-semibold" : "text-white"
                 }`}
               >
                 {splitStringUsingRegex(nav.label).map((character, index) => (
