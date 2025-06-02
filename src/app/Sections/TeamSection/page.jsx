@@ -83,7 +83,7 @@ export default function TeamSection() {
                   <div className="relative">
                     <div className="aspect-square relative overflow-hidden border border-gray-800">
                       <Image
-                        src={member.image || "/placeholder.svg"}
+                        src={member.image || "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"}
                         alt={member.name}
                         fill
                         className={`object-cover transition-opacity duration-500 ${
@@ -172,7 +172,7 @@ const teamMembers = [
     name: "Mujeeb Shahbaz",
     role: "Founder & CEO",
     bio: "Alex leads our vision and technical strategy with over 10 years of experience in software development. His expertise in modern web technologies drives our innovative approach to client solutions and ensures we stay at the cutting edge of the industry.",
-    image: "/placeholder.svg?height=600&width=600",
+    image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     skills: ["Full-stack Development", "System Architecture", "Technical Leadership", "Cloud Infrastructure"],
     social: {
       github: "https://github.com",
@@ -185,7 +185,7 @@ const teamMembers = [
     name: "Muhammad Nouman",
     role: "Senior Developer",
     bio: "Michael specializes in building robust backend systems and optimizing application performance. His attention to detail ensures our projects are secure, scalable, and maintainable, while his problem-solving skills help overcome complex technical challenges.",
-    image: "/placeholder.svg?height=600&width=600",
+    image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     skills: ["Backend Development", "Database Optimization", "API Design", "Security"],
     social: {
       github: "https://github.com",
@@ -198,7 +198,7 @@ const teamMembers = [
     name: "Ahmad Sajjad",
     role: "Project Planner",
     bio: "Sarah brings creative vision to life with her exceptional design skills. Her background in both digital and print design allows her to create cohesive brand experiences across all touchpoints, ensuring our clients receive visually stunning and user-friendly solutions.",
-    image: "/placeholder.svg?height=600&width=600",
+    image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     skills: ["UI/UX Design", "Brand Identity", "Motion Design", "User Research"],
     social: {
       github: "https://github.com",
