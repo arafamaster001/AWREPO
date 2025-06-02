@@ -1,6 +1,4 @@
-// src/app/admin/layout.jsx
-"use client";  // <-- add this line to make it a client component
-
+"use client";  
 import React, { useEffect } from "react";
 import SideBar from "../Components/Sidebar";
 import { usePathname } from "next/navigation";
