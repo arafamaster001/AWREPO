@@ -89,46 +89,46 @@ const Header = () => {
           <div className="logo">
             <Link href={"/"} className="text-3xl font-bold">Arafa Webs</Link>
           </div>
-          <div>
-         <div className="nav_links hidden lg:flex items-center gap-6">
-            {NavLinks.map((nav, navIndex) => (
-              <div
-                key={nav.label}
-                id={`navmenu_${navIndex + 1}`}
-                className="relative text_container cursor-pointer"
-              >
+          <div className="abc">
+
+            <div className="nav_links hidden lg:flex items-center gap-6">
+              {NavLinks.map((nav, navIndex) => (
                 <p
+                  key={nav.label}
+                  id={`navmanu_${navIndex + 1}`}
                   onClick={() => scrollToSection(nav.path)}
                   onMouseEnter={() => setHoveredIndex(navIndex)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  className={`${pathname === nav.path ? "font-semibold" : "text-white"}`}
+                  className={`text_container relative cursor-pointer ${
+                    pathname === nav.path ? " font-semibold" : "text-white"
+                  }`}
                 >
-                  {splitStringUsingRegex(nav.label).map((character, index) => (
-                    <span className="char_container inline-block" key={index}>
-                      <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
-                        {character}
+                  <div className="overflow-hidden">
+                    {splitStringUsingRegex(nav.label).map((character, index) => (
+                      <span className="char_container inline-block" key={index}>
+                        <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
+                          {character}
+                        </span>
+                        <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
+                          {character}
+                        </span>
                       </span>
-                      <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
-                        {character}
-                      </span>
-                    </span>
-                  ))}
+                    ))}
+                  </div>
+                   <div className="dropdown_container w-full opacity-0 top-5 bg-white text-black absolute">
+                      <ul>
+                        <li>Service 1</li>
+                        <li>Service 2</li>
+                        <li>Service 3</li>
+                      </ul>
+                    </div>
                 </p>
 
-                {/* Dropdown container inside navmenu_3 */}
-                {navIndex === 2 && (
-                  <div className="dropdown_container">
-                    dropdown container
-                  </div>
-                )}
-              </div>
-            ))}
-
-            
-          </div>
+              ))}
+            </div>
+           
 
           </div>
-
 
           <div className="hidden lg:block">
             <button className="main_btn" onClick={() => setShowBookingForm(true)}>Get Started</button>
@@ -141,9 +141,7 @@ const Header = () => {
             <span className={`nav_toggle_btns w-6 h-[2px] bg-white transition-transform duration-300 ${isOpen ? "rotate-45 translate-y-[5px]" : ""}`} />
             <span className={`nav_toggle_btns w-6 h-[2px] bg-white transition-transform duration-300 ${isOpen ? "-rotate-45 -translate-y-[5px]" : ""}`} />
           </div>
-
         </nav>
-        
 
         <div className={`fixed top-0 right-0 h-screen w-full   bg-black text-white px-6 py-10 flex flex-col justify-between gap-6 z-30 transform transition-transform duration-300 lg:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"

@@ -68,7 +68,7 @@ nav {
 .text_container {
   position: relative;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .char_container {
   position: relative;
@@ -495,22 +495,16 @@ footer{
 /* ================= */
 
 
-/* Initially hide the dropdown */
 .dropdown_container {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  position: relative;
-  top: 100%;
-  left: 0;
-  background: white;
-  padding: 1rem;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: red;
 }
 
-/* Reveal dropdown when parent is hovered */
-#navmenu_3:hover .dropdown_container {
+#navmanu_3:hover {
+  color: red;
+}
+
+#navmanu_3:hover .dropdown_container {
+  background-color: white;
+  color: red;
   opacity: 1;
-  visibility: visible;
 }
