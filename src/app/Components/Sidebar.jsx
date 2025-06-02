@@ -34,11 +34,11 @@ const SideBar = () => {
   return (
     <aside className="col-span-2 bg-gradient-to-b from-gray-900 via-gray-950 to-black border-r border-gray-800 shadow-lg p-6 flex flex-col h-screen sticky top-0">
       <div className="mb-12">
-        <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 flex items-center gap-4 whitespace-nowrap select-none">
-          <span className="p-3 rounded-full bg-gradient-to-tr from-indigo-700 to-purple-700 shadow-lg">
-            <LockKeyhole className="w-6 h-6 text-white" />
+        <h1 className="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 flex items-center gap-4 whitespace-nowrap select-none">
+          <span className="p-2 rounded-full bg-gradient-to-tr from-indigo-700 to-purple-700 shadow-lg">
+            <LockKeyhole className="w-5 h-5 text-white" />
           </span>
-          Admin
+          Admin Panel
         </h1>
       </div>
 
@@ -54,8 +54,8 @@ const SideBar = () => {
               className={`flex items-center gap-5 px-6 py-3 rounded-xl font-semibold text-lg transition-all duration-300 select-none
                 ${
                   isActive
-                    ? "bg-indigo-600 text-white shadow-[0_0_10px_rgb(99,102,241)]"
-                    : "text-gray-400 hover:bg-indigo-700 hover:text-white hover:shadow-lg"
+                    ? "bg-cyan-600 text-white shadow-[0_0_10px_rgb(99,102,241)]"
+                    : "text-gray-300 hover:bg-cyan-700 hover:text-white hover:shadow-lg"
                 }`}
               aria-current={isActive ? "page" : undefined}
             >
