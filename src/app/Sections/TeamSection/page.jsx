@@ -46,11 +46,10 @@ export default function TeamSection() {
               {teamMembers.map((member, index) => (
                 <button
                   key={member.id}
-                  className={`w-full text-left p-4 border-l-2 transition-all duration-300 ${
-                    activeMember === index
+                  className={`w-full text-left p-4 border-l-2 transition-all duration-300 ${activeMember === index
                       ? "border-white bg-gray-900/30"
                       : "border-gray-800 hover:border-gray-600 hover:bg-gray-900/10"
-                  }`}
+                    }`}
                   onClick={() => handleMemberChange(index)}
                 >
                   <div className="flex items-center justify-between">
@@ -59,9 +58,8 @@ export default function TeamSection() {
                       <p className="text-gray-400">{member.role}</p>
                     </div>
                     <ChevronRightIcon
-                      className={`w-5 h-5 transition-transform duration-300 ${
-                        activeMember === index ? "rotate-90 opacity-100" : "opacity-50"
-                      }`}
+                      className={`w-5 h-5 transition-transform duration-300 ${activeMember === index ? "rotate-90 opacity-100" : "opacity-50"
+                        }`}
                     />
                   </div>
                 </button>
@@ -75,20 +73,18 @@ export default function TeamSection() {
               {teamMembers.map((member, index) => (
                 <div
                   key={member.id}
-                  className={`${
-                    activeMember === index ? "block" : "hidden"
-                  } grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}
+                  className={`${activeMember === index ? "block" : "hidden"
+                    } grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}
                 >
                   {/* Image with geometric accents */}
                   <div className="relative">
                     <div className="aspect-square relative overflow-hidden border border-gray-800">
                       <Image
-                        src={member.image || "/placeholder.svg"}
+                        src={member.image || "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"}
                         alt={member.name}
                         fill
-                        className={`object-cover transition-opacity duration-500 ${
-                          isAnimating ? "opacity-80" : "opacity-100"
-                        }`}
+                        className={`object-cover transition-opacity duration-500 ${isAnimating ? "opacity-80" : "opacity-100"
+                          }`}
                       />
 
                       {/* Overlay with member number */}
@@ -172,7 +168,7 @@ const teamMembers = [
     name: "Mujeeb Shahbaz",
     role: "Founder & CEO",
     bio: "Alex leads our vision and technical strategy with over 10 years of experience in software development. His expertise in modern web technologies drives our innovative approach to client solutions and ensures we stay at the cutting edge of the industry.",
-    image: "/placeholder.svg?height=600&width=600",
+    image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     skills: ["Full-stack Development", "System Architecture", "Technical Leadership", "Cloud Infrastructure"],
     social: {
       github: "https://github.com",
@@ -185,7 +181,7 @@ const teamMembers = [
     name: "Muhammad Nouman",
     role: "Senior Developer",
     bio: "Michael specializes in building robust backend systems and optimizing application performance. His attention to detail ensures our projects are secure, scalable, and maintainable, while his problem-solving skills help overcome complex technical challenges.",
-    image: "/placeholder.svg?height=600&width=600",
+    image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     skills: ["Backend Development", "Database Optimization", "API Design", "Security"],
     social: {
       github: "https://github.com",
@@ -198,7 +194,7 @@ const teamMembers = [
     name: "Ahmad Sajjad",
     role: "Project Planner",
     bio: "Sarah brings creative vision to life with her exceptional design skills. Her background in both digital and print design allows her to create cohesive brand experiences across all touchpoints, ensuring our clients receive visually stunning and user-friendly solutions.",
-    image: "/placeholder.svg?height=600&width=600",
+    image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     skills: ["UI/UX Design", "Brand Identity", "Motion Design", "User Research"],
     social: {
       github: "https://github.com",
@@ -206,5 +202,5 @@ const teamMembers = [
       website: "https://example.com",
     },
   },
- 
+
 ]

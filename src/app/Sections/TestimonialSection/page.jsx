@@ -15,35 +15,35 @@ export default function TestimonialSection() {
         "Arafa Webs transformed our online presence with a stunning website that perfectly captures our brand. Their technical expertise and attention to detail exceeded our expectations.",
       author: "Sarah Johnson",
       position: "CEO, TechVision",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     },
     {
       quote:
         "Working with Arafa Webs was a game-changer for our e-commerce platform. Their Shopify expertise helped us increase conversions by 40% within the first month.",
       author: "Michael Chen",
       position: "Founder, StyleHub",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     },
     {
       quote:
         "The team at Arafa Webs delivered our complex web application ahead of schedule and with flawless functionality. Their technical knowledge and problem-solving abilities are outstanding.",
       author: "Emma Rodriguez",
       position: "CTO, DataFlow Systems",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     },
     {
       quote:
         "We've worked with several development agencies, but Arafa Webs stands out for their communication, reliability, and exceptional quality of work. They're now our go-to partner for all web projects.",
       author: "David Park",
       position: "Marketing Director, GrowthLabs",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     },
     {
       quote:
         "We've worked with several development agencies, but Arafa Webs stands out for their communication, reliability, and exceptional quality of work. They're now our go-to partner for all web projects.",
       author: "David Park",
       position: "Marketing Director, GrowthLabs",
-      image: "/placeholder.svg?height=80&width=80",
+      image: "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
     },
   ]
 
@@ -149,7 +149,7 @@ export default function TestimonialSection() {
                     <div className="relative">
                       <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-gray-400/20">
                         <img
-                          src={testimonials[currentIndex].image || "/placeholder.svg"}
+                          src={testimonials[currentIndex].image || "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"}
                           alt={testimonials[currentIndex].author}
                           className="w-full h-full object-cover"
                         />

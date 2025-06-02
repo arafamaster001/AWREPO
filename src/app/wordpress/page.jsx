@@ -57,7 +57,7 @@ const WordPress = () => {
         custom={0}
         className="text-gray-400 text"
       >
-        [ Shopify ]
+        [ WordPress ]
       </motion.span>
 
       <motion.h1

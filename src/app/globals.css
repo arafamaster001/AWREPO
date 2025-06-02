@@ -27,6 +27,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  background-color: #000000 !important;
 }
 
 .para {
@@ -169,13 +170,11 @@ nav {
 
 .animate_service {
   transition: all 0.1s;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 62%,
-    #000000c4 62%,
-    #000000 75%
-  );
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%); */
+  background: 
+  linear-gradient(to bottom, rgba(0,0,0,0) 40%, #000 70%);
+  /* linear-gradient(to right, rgba(0,0,0,0) 20%, #000 100%); */
+
   @apply absolute w-full h-full left-0 border-white/20 border-l lg:border-none;
 }
 .anime:hover {
