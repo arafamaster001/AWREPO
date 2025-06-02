@@ -6,7 +6,11 @@ export async function POST(req) {
   await dbConnection();
 
   try {
-    const data = await req.json();
+    // Parse JSON data from request body with Error Solved error json format
+    // const data = await req.json();
+    const text = await req.text();
+    const data = JSON.parse(text);
+
     const { uuid, entranceTime, exitTime, event, location } = data;
 
     console.log("New session: ", { uuid, entranceTime, event, location });
@@ -63,7 +67,7 @@ export async function POST(req) {
           visitCount: 1,
           sessions: [newSession],
           location,
-          errorLogs: []
+          errorLogs: [],
         });
 
         console.log("New user created: ", dataSaved);
@@ -88,11 +92,7 @@ export async function POST(req) {
 
         const lastSession = existing.sessions[existing.sessions.length - 1];
 
-        if (
-          lastSession &&
-          lastSession.entranceTime &&
-          !lastSession.exitTime
-        ) {
+        if (lastSession && lastSession.entranceTime && !lastSession.exitTime) {
           // Update last session with exit time and duration
           const enterDate = new Date(lastSession.entranceTime);
           const duration = Math.floor((exitDate - enterDate) / 1000);
@@ -131,7 +131,7 @@ export async function POST(req) {
               location,
             },
           ],
-          errorLogs: []
+          errorLogs: [],
         });
 
         console.log("Session created successfully: ", datasaved);
@@ -151,11 +151,13 @@ export async function POST(req) {
         errorMessage: error.message,
         errorStack: error.stack,
         timestamp: new Date(),
-        requestData: await req.json().catch(() => ({})) // Safely attempt to get request data
+        requestData: await req.json().catch(() => ({})), // Safely attempt to get request data
       };
 
-      const existing = await sessionModel.findOne({ uuid: (await req.json().catch(() => ({ uuid: null }))).uuid });
-      
+      const existing = await sessionModel.findOne({
+        uuid: (await req.json().catch(() => ({ uuid: null }))).uuid,
+      });
+
       if (existing) {
         if (!Array.isArray(existing.errorLogs)) {
           existing.errorLogs = [];
@@ -164,12 +166,15 @@ export async function POST(req) {
         await existing.save();
       } else {
         await sessionModel.create({
-          uuid: (await req.json().catch(() => ({ uuid: `error-${Date.now()}` }))).uuid || `error-${Date.now()}`,
+          uuid:
+            (
+              await req.json().catch(() => ({ uuid: `error-${Date.now()}` }))
+            ).uuid || `error-${Date.now()}`,
           status: "new",
           lastVisit: new Date(),
           visitCount: 0,
           sessions: [],
-          errorLogs: [errorLog]
+          errorLogs: [errorLog],
         });
       }
     } catch (logError) {

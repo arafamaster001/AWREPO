@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
 import useAnonUserStore from '@/store/useAnonUserStore';
 
-export default function SessionTracker() {
+function Session() {
   const searchParams = useSearchParams();
   const { uuid, setUUID } = useAnonUserStore();
   const hasTrackedEntrance = useRef(false);
@@ -99,4 +99,12 @@ export default function SessionTracker() {
   }, [searchParams, setUUID, uuid]);
 
   return null;
+}
+
+export default function SessionTracker() {
+  return (
+    <Suspense fallback={null}>
+      <Session />
+    </Suspense>
+  );
 }

@@ -46,11 +46,10 @@ export default function TeamSection() {
               {teamMembers.map((member, index) => (
                 <button
                   key={member.id}
-                  className={`w-full text-left p-4 border-l-2 transition-all duration-300 ${
-                    activeMember === index
+                  className={`w-full text-left p-4 border-l-2 transition-all duration-300 ${activeMember === index
                       ? "border-white bg-gray-900/30"
                       : "border-gray-800 hover:border-gray-600 hover:bg-gray-900/10"
-                  }`}
+                    }`}
                   onClick={() => handleMemberChange(index)}
                 >
                   <div className="flex items-center justify-between">
@@ -59,9 +58,8 @@ export default function TeamSection() {
                       <p className="text-gray-400">{member.role}</p>
                     </div>
                     <ChevronRightIcon
-                      className={`w-5 h-5 transition-transform duration-300 ${
-                        activeMember === index ? "rotate-90 opacity-100" : "opacity-50"
-                      }`}
+                      className={`w-5 h-5 transition-transform duration-300 ${activeMember === index ? "rotate-90 opacity-100" : "opacity-50"
+                        }`}
                     />
                   </div>
                 </button>
@@ -75,9 +73,8 @@ export default function TeamSection() {
               {teamMembers.map((member, index) => (
                 <div
                   key={member.id}
-                  className={`${
-                    activeMember === index ? "block" : "hidden"
-                  } grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}
+                  className={`${activeMember === index ? "block" : "hidden"
+                    } grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}
                 >
                   {/* Image with geometric accents */}
                   <div className="relative">
@@ -86,9 +83,8 @@ export default function TeamSection() {
                         src={member.image || "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"}
                         alt={member.name}
                         fill
-                        className={`object-cover transition-opacity duration-500 ${
-                          isAnimating ? "opacity-80" : "opacity-100"
-                        }`}
+                        className={`object-cover transition-opacity duration-500 ${isAnimating ? "opacity-80" : "opacity-100"
+                          }`}
                       />
 
                       {/* Overlay with member number */}
@@ -206,5 +202,5 @@ const teamMembers = [
       website: "https://example.com",
     },
   },
- 
+
 ]
