@@ -7,12 +7,14 @@ import ProjectsSection from "./Sections/ProjectsSection/page";
 import ContactForm from "./Sections/ContactForm/page";
 import WhyUsSection from "./Sections/WhyUsSection/page";
 import TestimonialSection from "./Sections/TestimonialSection/page";
+import CookieConsentBanner from "./Components/cookieConset";
 
 
 
 export default function Home() {
   return (
    <>
+   <CookieConsentBanner />
    <HeroSection />
    <AboutSection />
    <ServicesSection />

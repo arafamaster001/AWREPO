@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./Components/Header/page";
 import Footer from "./Components/Footer/page";
 import { HeroUIProvider } from "@heroui/react";
+import GoogleAnalytics from "./Components/GoogleAnalytics";
 // import SessionTracker from "./Components/SessionTracker";
 
 const geistSans = localFont({
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <HeroUIProvider>
           <Header />
           {/* <SessionTracker /> */}
+          {/* <GoogleAnalytics /> */}
           {children}
           <Footer />
         </HeroUIProvider>
