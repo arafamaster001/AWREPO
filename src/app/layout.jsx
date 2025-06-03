@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/page";
 import { HeroUIProvider } from "@heroui/react";
 import GoogleAnalytics from "./Components/GoogleAnalytics";
 // import SessionTracker from "./Components/SessionTracker";
+import { PostHogProvider } from "./Components/PostHogProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,13 +36,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <HeroUIProvider>
-          <Header />
-          {/* <SessionTracker /> */}
-          {/* <GoogleAnalytics /> */}
-          {children}
-          <Footer />
-        </HeroUIProvider>
+        <PostHogProvider>
+          <HeroUIProvider>
+            <Header />
+            {/* <SessionTracker /> */}
+            {/* <GoogleAnalytics /> */}
+            {children}
+            <Footer />
+          </HeroUIProvider>
+        </PostHogProvider>
       </body>
     </html>
   );

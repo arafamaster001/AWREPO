@@ -1,6 +1,6 @@
 import dbConnection from "@/config/connectDB";
 import { NextResponse } from "next/server";
-import sessionModel from "@/models/sessionModel";
+import sessionModel from "@/models/__sessionModel";
 
 export async function POST(req) {
   await dbConnection();
