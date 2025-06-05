@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { FaShopify } from "react-icons/fa";
 import ShopifyStacks from "./ShopifyServices/page";
@@ -8,7 +8,7 @@ import ContactForm from "../Sections/ContactForm/page";
 import ProjectsSection from "../Sections/ProjectsSection/page";
 import TestimonialSection from "../Sections/TestimonialSection/page";
 import StacksShopify from "./StackShopify/page";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { blurInVariant } from "../utils/blurInVariant";
 
 const Shopify = () => {
@@ -25,36 +25,7 @@ const Shopify = () => {
   }
 }`}
           </div>
-
-          {/* <div className=" col-span-1 w-full h-full  pt-[20%] lg:pt-[10%] relative flex flex-col gap-4">
-          
-          <span className="text-gray-400 text">[ Shopify ]</span>
-        
-           <h1 className="text-5xl font-bold leading-tight">
-           Think {" "}
-                  <span className="relative inline-block">
-                    <span className="relative z-10"> E-Commerce</span>
-                    <svg
-                      className="absolute -bottom-2 left-0 w-full"
-                      height="10"
-                      viewBox="0 0 200 10"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M0 5C50 -1.5 150 -1.5 200 5" stroke="white" strokeWidth="2" fill="none" />
-                    </svg>
-                  </span>{" "}
-                  <br />
-               Think ArafaWebs
-                </h1>
-          <div className="flex gap-2 mt-2">
-            <button className="main_btn">Start building</button>
-            <button className="web_btn flex gap-1 justify-center">
-              Meet with Experts
-            </button>
-          </div>
-        </div> */}
           <div className="col-span-1 w-full h-full pt-[20%] lg:pt-[10%] relative flex flex-col gap-4">
-
             <motion.span
               variants={blurInVariant}
               initial="hidden"
@@ -81,7 +52,12 @@ const Shopify = () => {
                   viewBox="0 0 200 10"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path d="M0 5C50 -1.5 150 -1.5 200 5" stroke="white" strokeWidth="2" fill="none" />
+                  <path
+                    d="M0 5C50 -1.5 150 -1.5 200 5"
+                    stroke="white"
+                    strokeWidth="2"
+                    fill="none"
+                  />
                 </svg>
               </span>{" "}
               <br />
@@ -96,7 +72,9 @@ const Shopify = () => {
               className="flex gap-2 mt-2"
             >
               <button className="main_btn">Start building</button>
-              <button className="web_btn flex gap-1 justify-center">Meet with Experts</button>
+              <button className="web_btn flex gap-1 justify-center">
+                Meet with Experts
+              </button>
             </motion.div>
           </div>
           <div className="col-span-1  flex items-center justify-center relative">

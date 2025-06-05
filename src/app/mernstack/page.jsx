@@ -13,7 +13,7 @@ import TechCase from "./Techstack/page";
 
 const MernStack = () => {
   return (
-    <main className="w-full h-auto relative ">
+    <main className="w-full h-auto relative responsive_cont">
       <div className="h-[100vh] md:h-full flex flex-col gap-10 md:gap-0  justify-center">
       <div className="w-full px-[5%] pt-[10%] relative flex flex-col gap-4 mern_hero">
       <motion.span

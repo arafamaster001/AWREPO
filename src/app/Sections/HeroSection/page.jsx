@@ -216,7 +216,8 @@ const HeroSection = () => {
 
       <div className="col-span-1 relative flex justify-center items-center  h-auto overflow-hidden">
         <div className="flex justify-center">
-        <div className=" md:hidden w-full  overflow-hidden h-[500px]">
+        <div className="relative md:hidden w-full overflow-hidden h-[500px]">
+        <div className="absolute w-full h-full z-20 bg-transparent"></div>
           <MobileEarth />
         </div>
         </div>
