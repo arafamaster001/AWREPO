@@ -31,7 +31,7 @@ function RotatingEarth() {
 // Main Page Component
 export default function MobileEarth() {
   return (
-    <div className="h-[600px] w-[600px] xl:w-[500px] xl:h-[500px] z-20">
+    <div className="h-[650px] w-[650px] xl:w-[500px] xl:h-[500px] z-20">
       <div className=" w-full flex items-center justify-center h-full">
         <Canvas
           shadows
