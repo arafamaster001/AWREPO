@@ -2,8 +2,9 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import { X, Calendar, DollarSign, Globe } from "lucide-react";
+import { X } from "lucide-react";
 import splitStringUsingRegex from "@/app/utils/page";
+import Form from "./Form";
 
 const Header = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -40,48 +41,6 @@ const Header = () => {
     transitionDelay: `${index * 0.02}s`,
   });
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    projectType: "",
-    timeline: "",
-    budget: "",
-    description: "",
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Project booking data:", formData);
-    alert("Project booking submitted! We'll contact you soon.");
-    setShowBookingForm(false);
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      projectType: "",
-      timeline: "",
-      budget: "",
-      description: "",
-    });
-  };
-
-  const projectTypes = [
-    { value: "business-website", label: "Business Website" },
-    { value: "e-commerce", label: "E-commerce Store" },
-    { value: "mobile-app", label: "Mobile App" },
-    { value: "portfolio", label: "Portfolio Website" },
-    { value: "custom", label: "Custom Solution" },
-  ];
-
-  const budgetRanges = ["$500 - $1,000", "$1,000 - $3,000", "$3,000 - $5,000", "$5,000 - $10,000", "$10,000+"];
-  const timelineOptions = ["1-2 weeks", "2-4 weeks", "1-2 months", "2-3 months", "3+ months"];
-
   return (
     <>
       <header className="fixed w-full z-20 bg-transparent" style={{ backdropFilter: "blur(20px)" }}>
@@ -90,50 +49,47 @@ const Header = () => {
             <Link href={"/"} className="text-3xl font-bold">Arafa Webs</Link>
           </div>
           <div className="abc">
-
             <div className="nav_links hidden lg:flex items-center gap-6">
               {NavLinks.map((nav, navIndex) => (
-                <p
-                  key={nav.label}
-                  id={`navmanu_${navIndex + 1}`}
-                  onClick={() => scrollToSection(nav.path)}
-                  onMouseEnter={() => setHoveredIndex(navIndex)}
-                  onMouseLeave={() => setHoveredIndex(null)}
-                  className={`text_container relative cursor-pointer ${
-                    pathname === nav.path ? " font-semibold" : "text-white"
-                  }`}
-                >
-                  <span className="overflow-hidden">
-                    {splitStringUsingRegex(nav.label).map((character, index) => (
-                      <span className="char_container inline-block" key={index}>
-                        <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
-                          {character}
+                <div key={nav.label} className="relative">
+                  <p
+                    id={`navmanu_${navIndex + 1}`}
+                    onClick={() => scrollToSection(nav.path)}
+                    onMouseEnter={() => setHoveredIndex(navIndex)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                    className={`text_container relative cursor-pointer ${
+                      pathname === nav.path ? " font-semibold" : "text-white"
+                    }`}
+                  >
+                    <span className="overflow-hidden">
+                      {splitStringUsingRegex(nav.label).map((character, index) => (
+                        <span className="char_container inline-block" key={index}>
+                          <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
+                            {character}
+                          </span>
+                          <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
+                            {character}
+                          </span>
                         </span>
-                        <span style={getTransformStyles(hoveredIndex === navIndex, index)}>
-                          {character}
-                        </span>
-                      </span>
-                    ))}
-                  </span>
-                   <span className="dropdown_container bg-black top-11  right-[] left-[-52vw] z-0 ">
-                      <span className="w-full px-[5%] py-[2%] h-full flex gap-10 font-bold">
-                        <Link href={"/mernstack"}>Mern Stack</Link>
-                        <Link href={"/shopify"}>Shopify</Link>
-                        <Link href={"/wordpress"}>Wordpress</Link>
-                      </span>
+                      ))}
                     </span>
-                </p>
-
+                    {nav.label === "Services" && (
+                      <span className="dropdown_container bg-black top-11 right-[] left-[-52vw] z-0">
+                        <span className="w-full px-[5%] py-[2%] h-full flex gap-10 font-bold">
+                          <Link href={"/mernstack"}>Mern Stack</Link>
+                          <Link href={"/shopify"}>Shopify</Link>
+                          <Link href={"/wordpress"}>Wordpress</Link>
+                        </span>
+                      </span>
+                    )}
+                  </p>
+                </div>
               ))}
             </div>
-           
-
           </div>
-
           <div className="hidden lg:block">
             <button className="main_btn" onClick={() => setShowBookingForm(true)}>Get Started</button>
           </div>
-
           <div
             className="nav_toggle_box flex flex-col gap-1 cursor-pointer lg:hidden z-40"
             onClick={() => setIsOpen(!isOpen)}
@@ -143,109 +99,54 @@ const Header = () => {
           </div>
         </nav>
 
-        <div className={`fixed top-0 right-0 h-screen w-full   bg-black text-white px-6 py-10 flex flex-col justify-between gap-6 z-30 transform transition-transform duration-300 lg:hidden ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}>
-          {/* <div className="flex justify-end">
-            <button onClick={() => setIsOpen(false)} className="text-white text-xl"></button>
-          </div> */}
-          <div className="flex flex-col gap-5 py-[10%]">
-          {NavLinks.map((nav) => (
-            <button
-              key={nav.label}
-              onClick={() => {
-                scrollToSection(nav.path);
-                setIsOpen(false);
-              }}
-              className={`text-lg text-left ${pathname === nav.path ? " font-semibold" : "text-white"}`}
-            >
-              {nav.label}
+        <div
+          className={`fixed top-0 right-0 h-screen w-full bg-black text-white px-6 py-10 flex flex-col justify-between gap-6 z-30 transform transition-transform duration-300 lg:hidden ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex justify-end">
+            <button onClick={() => setIsOpen(false)} className="text-white text-xl">
+              <X className="w-6 h-6" />
             </button>
-          ))}
           </div>
-          <button className="main_btn  mt-4" onClick={() => {
-            setIsOpen(false);
-            setShowBookingForm(true);
-          }}>Get Started</button>
+          <div className="flex flex-col gap-5 py-[10%]">
+            {NavLinks.map((nav) => (
+              <div key={nav.label}>
+                <button
+                  onClick={() => {
+                    scrollToSection(nav.path);
+                    setIsOpen(false);
+                  }}
+                  className={`text-lg text-left ${pathname === nav.path ? " font-semibold" : "text-white"}`}
+                >
+                  {nav.label}
+                </button>
+                {nav.label === "Services" && (
+                  <div className="flex flex-col gap-2 pl-4 mt-2">
+                    <Link href="/mernstack" onClick={() => setIsOpen(false)}>Mern Stack</Link>
+                    <Link href="/shopify" onClick={() => setIsOpen(false)}>Shopify</Link>
+                    <Link href="/wordpress" onClick={() => setIsOpen(false)}>Wordpress</Link>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <button
+            className="main_btn mt-4"
+            onClick={() => {
+              setIsOpen(false);
+              setShowBookingForm(true);
+            }}
+          >
+            Get Started
+          </button>
         </div>
       </header>
 
-      {showBookingForm && (
-        <div className="modal-overlay">
-          <div className="modal-backdrop" onClick={() => setShowBookingForm(false)} />
-          <div className="modal-dot" />
-          <div className="modal-content">
-            <div className="modal-header">
-              <div>
-                <h2 className="text-2xl font-bold">Book Your Project</h2>
-                <p className="text-white/80 mt-1">Let's bring your web vision to life</p>
-              </div>
-              <button onClick={() => setShowBookingForm(false)} className="close-btn">
-                <X className="w-6 h-6" />
-              </button>
-            </div>
-
-            <form onSubmit={handleSubmit} className="modal-form">
-              <div className="form-grid">
-                <div>
-                  <label>Full Name *</label>
-                  <input name="name" required value={formData.name} onChange={handleInputChange} className="form-input" />
-                </div>
-                <div>
-                  <label>Email Address *</label>
-                  <input name="email" type="email" required value={formData.email} onChange={handleInputChange} className="form-input" />
-                </div>
-              </div>
-
-              <div>
-                <label>Phone Number</label>
-                <input name="phone" value={formData.phone} onChange={handleInputChange} className="form-input" />
-              </div>
-
-              <div>
-                <label><Globe className="icon" /> Project Type *</label>
-                <select name="projectType" required value={formData.projectType} onChange={handleInputChange} className="form-input">
-                  <option value="">Select project type</option>
-                  {projectTypes.map((type) => (
-                    <option key={type.value} value={type.value}>{type.label}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="form-grid">
-                <div>
-                  <label><Calendar className="icon" /> Timeline *</label>
-                  <select name="timeline" required value={formData.timeline} onChange={handleInputChange} className="form-input">
-                    <option value="">Select timeline</option>
-                    {timelineOptions.map((option) => (
-                      <option key={option} value={option}>{option}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label><DollarSign className="icon" /> Budget Range *</label>
-                  <select name="budget" required value={formData.budget} onChange={handleInputChange} className="form-input">
-                    <option value="">Select budget</option>
-                    {budgetRanges.map((range) => (
-                      <option className="" key={range} value={range}>{range}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label>Project Description</label>
-                <textarea name="description" rows={4} value={formData.description} onChange={handleInputChange} className="form-input resize-none" />
-              </div>
-
-              <div className="form-actions">
-                <button type="button" onClick={() => setShowBookingForm(false)} className="cancel-btn">Cancel</button>
-                <button type="submit" className="submit-btn">Book Project</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
+      <Form
+        showBookingForm={showBookingForm}
+        setShowBookingForm={setShowBookingForm}
+      />
     </>
   );
 };

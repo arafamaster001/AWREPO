@@ -4,9 +4,9 @@ import "./globals.css";
 import Header from "./Components/Header/page";
 import Footer from "./Components/Footer/page";
 import { HeroUIProvider } from "@heroui/react";
-import GoogleAnalytics from "./Components/GoogleAnalytics";
 // import SessionTracker from "./Components/SessionTracker";
 import { PostHogProvider } from "./Components/PostHogProvider";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <PostHogProvider>
+          <ToastContainer />
           <HeroUIProvider>
             <Header />
             {/* <SessionTracker /> */}
