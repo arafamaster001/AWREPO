@@ -12,7 +12,7 @@ export default function Home() {
   return (
    <>
    <CookieConsentBanner />
-   {/* <HeroSection /> */}
+   <HeroSection />
    <AboutSection />  {/* Done */  }
    <ServicesSection />  {/* Done */  }
    <WhyUsSection /> {/* Done */  }
