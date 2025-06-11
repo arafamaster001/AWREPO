@@ -1,11 +1,10 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 
 export default function WhyUsSection() {
   const [activeIndex, setActiveIndex] = useState(0)
-  const containerRef = useRef(null)
 
   const features = [
     {

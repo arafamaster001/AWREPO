@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSection from "./Sections/HeroSection/page";
 import AboutSection from "./Sections/AboutSection/page";
 import ServicesSection from "./Sections/ServicesSection/page";
@@ -9,18 +8,16 @@ import WhyUsSection from "./Sections/WhyUsSection/page";
 import TestimonialSection from "./Sections/TestimonialSection/page";
 import CookieConsentBanner from "./Components/cookieConset";
 
-
-
 export default function Home() {
   return (
    <>
    <CookieConsentBanner />
-   <HeroSection />
-   <AboutSection />
-   <ServicesSection />
-   <WhyUsSection />
-   <ProjectsSection/>
-   <TestimonialSection />
+   {/* <HeroSection /> */}
+   <AboutSection />  {/* Done */  }
+   <ServicesSection />  {/* Done */  }
+   <WhyUsSection /> {/* Done */  }
+   <ProjectsSection/> {/* Done */  }
+   <TestimonialSection /> {/* Done */  }
    <ContactForm />
    {/* <TeamSection/> */}
    </>

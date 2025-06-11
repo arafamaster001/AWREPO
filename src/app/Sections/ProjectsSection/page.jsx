@@ -280,9 +280,9 @@ export default function ProjectsSection() {
   const handleScroll = () => checkScrollability()
 
   return (
-    <main id="projects" className="min-h-screen p-[5%] flex flex-col gap-10">
+    <section id="projects" className="min-h-screen p-[5%] flex flex-col gap-10">
       <div className="py-[2%]">
-        <h1 className="sub_heading">Our Projects</h1>
+        <h2 className="sub_heading">Our Projects</h2>
       </div>
 
       <div
@@ -352,6 +352,6 @@ export default function ProjectsSection() {
           <ChevronRight className="text-white/20" />
         </button>
       </div>
-    </main>
+    </section>
   )
 }

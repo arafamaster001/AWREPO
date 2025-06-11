@@ -2,14 +2,13 @@ import Link from "next/link";
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 
-
 const ServicesSection = () => {
   return (
-    <div id="services" className="w-full h-auto relative px-[5%] py-[20%] lg:p-[5%]">
+    <section id="services" className="w-full h-auto relative px-[5%] py-[20%] lg:p-[5%]">
       <div className="py-[5%]">
-        <h2 className="sub_heading ">Our Services</h2>
+        <h2 className="sub_heading">Our Services</h2>
       </div>
-      <div className="grid lg:grid-cols-3  ">
+      <div className="grid lg:grid-cols-3">
         <div className="col-span-1 services_cards_1 ">
           <span className="point">Mern Stack</span>
 
@@ -135,25 +134,11 @@ const ServicesSection = () => {
           <div className="card_buttons flex gap-3 w-full justify-center">
             <Link className="service_btn border-white/20 border flex items-center bg-black gap-2 z-10" href={"/wordpress"}>Details <MdArrowOutward /></Link>
           </div>
-          <div className="animate_service  "></div>
+          <div className="animate_service"></div>
         </div>
 
       </div>
-      {/* <div className="absolute inset-0 z-0">
-       
-        <div className="absolute bottom-20 right-20 w-0 h-0 border-l-[8px] border-r-[8px] border-t-[14px] border-l-transparent border-r-transparent border-t-white/20 rotate-45" />
-        <div className="absolute top-64 left-1/4 w-10 h-10 border border-white/20 rotate-45" />
-        <div className="absolute bottom-10 left-1/3 w-12 h-12 border border-white/20 rounded-md rotate-12" />
-        <div className="absolute bottom-20 right-1/4 w-4 h-4 before:content-[''] before:absolute before:w-px before:h-4 before:bg-white/20 before:rotate-45 after:content-[''] after:absolute after:w-px after:h-4 after:bg-white/20 after:-rotate-45" />
-        <svg
-          className="absolute top-48 left-1/2 w-6 h-6 text-white/20"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M10 15l-5.878 3.09L5.5 12.18.5 7.91l6.06-.88L10 2l3.44 5.03 6.06.88-4.998 4.27L15.878 18z" />
-        </svg>
-      </div> */}
-    </div>
+    </section>
   );
 };
 

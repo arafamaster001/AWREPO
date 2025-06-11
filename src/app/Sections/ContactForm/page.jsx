@@ -2,8 +2,7 @@ import Form from "./Form";
 
 function ContactForm() {
   return (
-    <div className="min-h-screen bg-black text-white py-[20%] px-[5%] lg:p-[5%] flex flex-col items-center justify-center relative">
-      
+    <section className="min-h-screen bg-black text-white py-[20%] px-[5%] lg:p-[5%] flex flex-col items-center justify-center relative">
 
       <div className="w-full  relative z-10">
         <div className="mb-16 max-w-xl">
@@ -21,7 +20,7 @@ function ContactForm() {
 
         <Form />
       </div>
-    </div>
+    </section>
   );
 }
 
