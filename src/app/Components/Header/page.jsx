@@ -104,11 +104,11 @@ const Header = () => {
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="flex justify-end">
+          {/* <div className="flex justify-end">
             <button onClick={() => setIsOpen(false)} className="text-white text-xl">
-              <X className="w-6 h-6" />
+             
             </button>
-          </div>
+          </div> */}
           <div className="flex flex-col gap-5 py-[10%]">
             {NavLinks.map((nav) => (
               <div key={nav.label}>
@@ -122,10 +122,10 @@ const Header = () => {
                   {nav.label}
                 </button>
                 {nav.label === "Services" && (
-                  <div className="flex flex-col gap-2 pl-4 mt-2">
-                    <Link href="/mernstack" onClick={() => setIsOpen(false)}>Mern Stack</Link>
-                    <Link href="/shopify" onClick={() => setIsOpen(false)}>Shopify</Link>
-                    <Link href="/wordpress" onClick={() => setIsOpen(false)}>Wordpress</Link>
+                  <div className="flex flex-col gap-5 mt-3 ">
+                    <Link className=" text-lg" href="/mernstack" onClick={() => setIsOpen(false)}>Mern Stack</Link>
+                    <Link className=" text-lg" href="/shopify" onClick={() => setIsOpen(false)}>Shopify</Link>
+                    <Link className=" text-lg" href="/wordpress" onClick={() => setIsOpen(false)}>Wordpress</Link>
                   </div>
                 )}
               </div>
