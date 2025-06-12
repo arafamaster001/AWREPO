@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  Earth,
-  Home,
-  LockKeyhole,
-  LogOut,
-} from "lucide-react";
+import { Earth, Home, LockKeyhole, LogOut } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -34,8 +29,8 @@ const SideBar = () => {
   return (
     <aside className="col-span-2 bg-gradient-to-b from-gray-900 via-gray-950 to-black border-r border-gray-800 shadow-lg p-6 flex flex-col h-screen sticky top-0">
       <div className="mb-12">
-        <h1 className="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 flex items-center gap-4 whitespace-nowrap select-none">
-          <span className="p-2 rounded-full bg-gradient-to-tr from-indigo-700 to-purple-700 shadow-lg">
+        <h1 className="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 flex items-center gap-4 whitespace-nowrap select-none">
+          <span className="p-2 rounded-full bg-gradient-to-tr from-teal-700 to-green-700 shadow-lg">
             <LockKeyhole className="w-5 h-5 text-white" />
           </span>
           Admin Panel
