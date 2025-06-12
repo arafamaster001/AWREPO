@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arafawebs.com/sitemap.xml
