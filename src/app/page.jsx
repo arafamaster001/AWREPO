@@ -13,13 +13,13 @@ export default function Home() {
     <>
       <CookieConsentBanner />
       <HeroSection /> 
-      <AboutSection />  {/* Done */}
-      <ServicesSection />  {/* Done */}
-      <WhyUsSection /> {/* Done */}
-      <ProjectsSection /> {/* Done */}
-      <TestimonialSection /> {/* Done */}
-      <ContactForm /> {/* Done */}
-      {/* <TeamSection/> */}
+      <AboutSection /> 
+      <ServicesSection /> 
+      <WhyUsSection />
+      <ProjectsSection />
+      <TestimonialSection />
+      <ContactForm />
+      
     </>
   );
 }
