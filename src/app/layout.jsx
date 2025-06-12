@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "./Components/Header/page";
 import Footer from "./Components/Footer/page";
 // import SessionTracker from "./Components/SessionTracker";
-import { PostHogProvider } from "./Components/PostHogProvider";
 import { ToastContainer } from "react-toastify";
 
 const geistSans = localFont({
@@ -35,14 +34,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <PostHogProvider>
           <ToastContainer />
             <Header />
             {/* <SessionTracker /> */}
             {/* <GoogleAnalytics /> */}
             {children}
             <Footer />
-        </PostHogProvider>
       </body>
     </html>
   );
