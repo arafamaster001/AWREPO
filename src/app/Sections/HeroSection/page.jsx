@@ -147,7 +147,7 @@ const HeroSection = () => {
       id="landing"
       className="res_cont w-full h-auto  lg:h-[100vh] grid lg:grid-cols-2 items-center  lg:gap-0 relative  text-white  pt-[15%] lg:p-[5%] "
     >
-      {/*  */}
+     
       {/* Dust particles background */}
       <div className="absolute inset-0 z-0">
         <canvas ref={canvasRef} className="w-full h-full" />

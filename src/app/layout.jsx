@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./Components/Header/page";
 import Footer from "./Components/Footer/page";
-import { HeroUIProvider } from "@heroui/react";
 // import SessionTracker from "./Components/SessionTracker";
 import { PostHogProvider } from "./Components/PostHogProvider";
 import { ToastContainer } from "react-toastify";
@@ -38,13 +37,11 @@ export default function RootLayout({ children }) {
       >
         <PostHogProvider>
           <ToastContainer />
-          <HeroUIProvider>
             <Header />
             {/* <SessionTracker /> */}
             {/* <GoogleAnalytics /> */}
             {children}
             <Footer />
-          </HeroUIProvider>
         </PostHogProvider>
       </body>
     </html>

@@ -10,16 +10,16 @@ import CookieConsentBanner from "./Components/cookieConset";
 
 export default function Home() {
   return (
-   <>
-   <CookieConsentBanner />
-   <HeroSection />
-   <AboutSection />  {/* Done */  }
-   <ServicesSection />  {/* Done */  }
-   <WhyUsSection /> {/* Done */  }
-   <ProjectsSection/> {/* Done */  }
-   <TestimonialSection /> {/* Done */  }
-   <ContactForm />
-   {/* <TeamSection/> */}
-   </>
+    <>
+      <CookieConsentBanner />
+      <HeroSection /> 
+      <AboutSection />  {/* Done */}
+      <ServicesSection />  {/* Done */}
+      <WhyUsSection /> {/* Done */}
+      <ProjectsSection /> {/* Done */}
+      <TestimonialSection /> {/* Done */}
+      <ContactForm /> {/* Done */}
+      {/* <TeamSection/> */}
+    </>
   );
 }
