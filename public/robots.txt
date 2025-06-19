@@ -1,4 +1,7 @@
 User-agent: *
+
+Disallow: /external-site/
+Disallow: /weird-path/
 Allow: /
 
 Sitemap: https://arafawebs.com/sitemap.xml
