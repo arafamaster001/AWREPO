@@ -1,10 +1,11 @@
 "use client"
 
+import { Facebook } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
-import { RiTwitterXLine } from "react-icons/ri";
+import { RiFacebookCircleFill, RiInstagramFill, RiInstagramLine, RiTwitterXLine } from "react-icons/ri";
 
 
 const Footer = () => {
@@ -67,8 +68,8 @@ const Footer = () => {
 
           <div className="flex flex-col gap-2">
             <a target="_blank" href={"https://www.linkedin.com/in/arafa-webs-74a8b6367/"}>LinkedIn</a>
-            <a target="_blank" href={"#"}>Facebook</a>
-            <a target="_blank" href={"#"}>Instagram</a>
+            <a target="_blank" href={"https://www.facebook.com/people/Arafa-Webs/61577071787769/"}>Facebook</a>
+            <a target="_blank" href={"https://www.instagram.com/arafawebs_official/"}>Instagram</a>
           </div>
         </div>
         <div className="lg:col-span-1 flex flex-col gap-4">
@@ -90,10 +91,12 @@ const Footer = () => {
             <span className="text-gray-400">All right reserved © 2025 Arafawebs</span>
           </div>
           <div className="flex gap-10 lg:gap-5 items-center  justify-center">
-            <a target="_blank" href="https://www.linkedin.com/in/arafa-webs-74a8b6367/"><FaLinkedin className="text-2xl" /></a>
-            <a target="_blank" href="https://github.com/arafamaster001"><FaGithub className="text-2xl" /></a>
-            <a target="_blank" href="#"><RiTwitterXLine className="text-2xl" /></a>
-            <a target="_blank" href="#"><FaDiscord className="text-3xl" /></a>
+            <a target="_blank" href="https://www.linkedin.com/in/arafa-webs-74a8b6367/"><FaLinkedin className="text-2xl hover:-translate-y-1 duration-200" /></a>
+            <a target="_blank" href="https://www.facebook.com/people/Arafa-Webs/61577071787769/"><RiFacebookCircleFill className="text-3xl hover:-translate-y-1 duration-200" /></a>
+            <a target="_blank" href="https://www.instagram.com/arafawebs_official/"><RiInstagramLine className="text-3xl hover:-translate-y-1 duration-200" /></a>
+            <a target="_blank" href="https://github.com/arafamaster001"><FaGithub className="text-2xl hover:-translate-y-1 duration-200" /></a>
+            <a target="_blank" href="#"><RiTwitterXLine className="text-2xl hover:-translate-y-1 duration-200" /></a>
+            <a target="_blank" href="#"><FaDiscord className="text-3xl hover:-translate-y-1 duration-200" /></a>
 
           </div>
         </div>
