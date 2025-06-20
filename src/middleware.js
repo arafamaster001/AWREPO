@@ -12,7 +12,9 @@ export function middleware(request) {
     "/privacypolicy",
     "/termsandconditions",
     "/about",
-    "booking",
+    "/booking",
+    "/image-sitemap",
+    "/sitemap",
   ];
 
   // Allow static assets and internal Next.js paths
