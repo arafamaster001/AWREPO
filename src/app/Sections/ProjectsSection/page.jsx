@@ -5,200 +5,185 @@ import React, { useRef, useState, useEffect } from "react"
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 
 export default function ProjectsSection() {
-  const cards = [
-    {
-      img: "/shopify/1.png",
-      title: "RepZone Active Wear",
-      technology: "Next.Js",
-      number: "01",
-      link: "http://repzoneactivewear.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/2.png",
-      title: "Minimarvels",
-      technology: "Next.Js",
-      number: "02",
-      link: "https://the-minimarvels.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/3.png",
-      title: "Zenzed",
-      technology: "Next.Js",
-      number: "03",
-      link: "http://zenzed.com.au/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/4.png",
-      title: "Junk Brands",
-      technology: "Next.Js",
-      number: "04",
-      link: "https://www.junkbrands.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/5.png",
-      title: "Zenzed",
-      technology: "Next.Js",
-      number: "05",
-      link: "http://zenzed.com.au/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/6.png",
-      title: "Mamas Armour",
-      technology: "Next.Js",
-      number: "06",
-      link: "https://mamasarmour.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/7.png",
-      title: "Maseer",
-      technology: "Next.Js",
-      number: "07",
-      link: "https://maseer.nl/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/8.png",
-      title: "Sofasway",
-      technology: "Next.Js",
-      number: "08",
-      link: "http://sofasway.co/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/9.png",
-      title: "RepFitness",
-      technology: "Next.Js",
-      number: "09",
-      link: "https://repfitness.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/10.png",
-      title: "Mantelsdirect",
-      technology: "Next.Js",
-      number: "10",
-      link: "https://www.mantelsdirect.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/11.png",
-      title: "Kinobody",
-      technology: "Next.Js",
-      number: "11",
-      link: "https://kinobody.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/12.png",
-      title: "Beach Camera",
-      technology: "Next.Js",
-      number: "12",
-      link: "https://www.beachcamera.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/13.png",
-      title: "Worldwide Stereo",
-      technology: "Next.Js",
-      number: "13",
-      link: "https://www.worldwidestereo.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/14.png",
-      title: "Jula Amsterdam",
-      technology: "Next.Js",
-      number: "14",
-      link: "https://jula-amsterdam.nl/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/15.png",
-      title: "Mod Lighting",
-      technology: "Next.Js",
-      number: "15",
-      link: "https://mod-lighting.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/16.png",
-      title: "Everyday",
-      technology: "Next.Js",
-      number: "16",
-      link: "https://evryday.co.za/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/17.png",
-      title: "Goosecreekcandle",
-      technology: "Next.Js",
-      number: "17",
-      link: "https://goosecreekcandle.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/18.png",
-      title: "eGoat",
-      technology: "Next.Js",
-      number: "18",
-      link: "http://egoat.nl/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/19.png",
-      title: "La Bottine",
-      technology: "Next.Js",
-      number: "19",
-      link: "https://labottine.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/20.png",
-      title: "Noah Moda",
-      technology: "Next.Js",
-      number: "20",
-      link: "https://noah-moda.nl/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/21.png",
-      title: "Tempotent",
-      technology: "Next.Js",
-      number: "21",
-      link: "https://tempotent.hu/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
-    {
-      img: "/shopify/22.png",
-      title: "Lumber Liquidators",
-      technology: "Next.Js",
-      number: "22",
-      link: "https://lumberliquidators.com/"
-      // description: "Automate customer feedback and turn it into actionable insights.",
-    },
+ const cards = [
+  {
+    img: "/shopify/1.png",
+    title: "RepZone Active Wear",
+    technology: "Next.Js",
+    number: "01",
+    link: "http://repzoneactivewear.com/",
+    alt: "Screenshot of RepZone Active Wear Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/2.png",
+    title: "Minimarvels",
+    technology: "Next.Js",
+    number: "02",
+    link: "https://the-minimarvels.com/",
+    alt: "Screenshot of Minimarvels Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/3.png",
+    title: "Zenzed",
+    technology: "Next.Js",
+    number: "03",
+    link: "http://zenzed.com.au/",
+    alt: "Screenshot of Zenzed Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/4.png",
+    title: "Junk Brands",
+    technology: "Next.Js",
+    number: "04",
+    link: "https://www.junkbrands.com/",
+    alt: "Screenshot of Junk Brands Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/5.png",
+    title: "Zenzed",
+    technology: "Next.Js",
+    number: "05",
+    link: "http://zenzed.com.au/",
+    alt: "Screenshot of Zenzed Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/6.png",
+    title: "Mamas Armour",
+    technology: "Next.Js",
+    number: "06",
+    link: "https://mamasarmour.com/",
+    alt: "Screenshot of Mamas Armour Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/7.png",
+    title: "Maseer",
+    technology: "Next.Js",
+    number: "07",
+    link: "https://maseer.nl/",
+    alt: "Screenshot of Maseer Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/8.png",
+    title: "Sofasway",
+    technology: "Next.Js",
+    number: "08",
+    link: "http://sofasway.co/",
+    alt: "Screenshot of Sofasway Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/9.png",
+    title: "RepFitness",
+    technology: "Next.Js",
+    number: "09",
+    link: "https://repfitness.com/",
+    alt: "Screenshot of RepFitness Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/10.png",
+    title: "Mantelsdirect",
+    technology: "Next.Js",
+    number: "10",
+    link: "https://www.mantelsdirect.com/",
+    alt: "Screenshot of Mantelsdirect Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/11.png",
+    title: "Kinobody",
+    technology: "Next.Js",
+    number: "11",
+    link: "https://kinobody.com/",
+    alt: "Screenshot of Kinobody Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/12.png",
+    title: "Beach Camera",
+    technology: "Next.Js",
+    number: "12",
+    link: "https://www.beachcamera.com/",
+    alt: "Screenshot of Beach Camera Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/13.png",
+    title: "Worldwide Stereo",
+    technology: "Next.Js",
+    number: "13",
+    link: "https://www.worldwidestereo.com/",
+    alt: "Screenshot of Worldwide Stereo Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/14.png",
+    title: "Jula Amsterdam",
+    technology: "Next.Js",
+    number: "14",
+    link: "https://jula-amsterdam.nl/",
+    alt: "Screenshot of Jula Amsterdam Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/15.png",
+    title: "Mod Lighting",
+    technology: "Next.Js",
+    number: "15",
+    link: "https://mod-lighting.com/",
+    alt: "Screenshot of Mod Lighting Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/16.png",
+    title: "Everyday",
+    technology: "Next.Js",
+    number: "16",
+    link: "https://evryday.co.za/",
+    alt: "Screenshot of Everyday Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/17.png",
+    title: "Goosecreekcandle",
+    technology: "Next.Js",
+    number: "17",
+    link: "https://goosecreekcandle.com/",
+    alt: "Screenshot of Goosecreekcandle Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/18.png",
+    title: "eGoat",
+    technology: "Next.Js",
+    number: "18",
+    link: "http://egoat.nl/",
+    alt: "Screenshot of eGoat Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/19.png",
+    title: "La Bottine",
+    technology: "Next.Js",
+    number: "19",
+    link: "https://labottine.com/",
+    alt: "Screenshot of La Bottine Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/20.png",
+    title: "Noah Moda",
+    technology: "Next.Js",
+    number: "20",
+    link: "https://noah-moda.nl/",
+    alt: "Screenshot of Noah Moda Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/21.png",
+    title: "Tempotent",
+    technology: "Next.Js",
+    number: "21",
+    link: "https://tempotent.hu/",
+    alt: "Screenshot of Tempotent Shopify website built with Next.js",
+  },
+  {
+    img: "/shopify/22.png",
+    title: "Lumber Liquidators",
+    technology: "Next.Js",
+    number: "22",
+    link: "https://lumberliquidators.com/",
+    alt: "Screenshot of Lumber Liquidators Shopify website built with Next.js",
+  },
+];
 
-    // {
-    //   title: "Move product work forward from anywhere",
-    //   subtitle: "Linear Mobile",
-    //   description: "Access your projects on the go with our mobile application.",
-    // },
-    // {
-    //   title: "Turn workplace requests into actionable issues",
-    //   subtitle: "Linear Asks",
-    //   description: "Manage and prioritize requests efficiently.",
-    // },
-    // {
-    //   title: "Integrate with your favorite tools",
-    //   subtitle: "Integrations",
-    //   description: "Connect with the tools your team already uses.",
-    // },
-  ]
 
   const sliderRef = useRef(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
@@ -308,7 +293,7 @@ export default function ProjectsSection() {
                 <div className=" flex-1"></div>
                 <div className=" flex flex-col gap-4">
                   <div> 
-                    <img src={card.img} alt="" className="w-full rounded-xl" />
+                    <img src={card.img} alt={card.alt} className="w-full rounded-xl" />
                   </div>
                   <div>
                     <h3 className="text-xl">{card.title}</h3>
