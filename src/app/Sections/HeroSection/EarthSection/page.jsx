@@ -55,6 +55,7 @@ export default function EarthSection() {
           {/* Controls: only horizontal rotation */}
           <OrbitControls
             enableZoom={false}
+            enablePan = {false}
             maxPolarAngle={Math.PI / 2.2}
             minPolarAngle={Math.PI / 2.2}
           />

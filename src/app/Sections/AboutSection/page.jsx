@@ -34,7 +34,7 @@ const AboutSection = () => {
         {/* Geometric shapes */}
         <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl" />
         <div className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full blur-3xl" />
-        <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.04),rgba(255,255,255,0.04)_1px,transparent_1px,transparent_8px)]" />
+        {/* <div className="absolute inset-0 bg-[repeating-linear-gradient  (45deg,rgba(255,255,255,0.04),rgba(255,255,255,0.04)_1px,transparent_1px,transparent_8px)]" /> */}
 
         {/* Floating elements */}
         <div className="absolute bottom-20 right-32 w-16 h-16 border border-white/20 rounded-full" />
