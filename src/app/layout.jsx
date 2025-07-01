@@ -5,6 +5,7 @@ import Header from "./Components/Header/page";
 import Footer from "./Components/Footer/page";
 // import SessionTracker from "./Components/SessionTracker";
 import { ToastContainer } from "react-toastify";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
