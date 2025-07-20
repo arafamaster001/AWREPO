@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <a target="_blank" href={"https://www.linkedin.com/in/arafa-webs-74a8b6367/"}>LinkedIn</a>
             <a target="_blank" href={"https://www.facebook.com/people/Arafa-Webs/61577071787769/"}>Facebook</a>
-            <a target="_blank" href={"https://www.instagram.com/arafawebs_official/"}>Instagram</a>
+            <a target="_blank" href={"https://www.instagram.com/arafawebs.official/"}>Instagram</a>
           </div>
         </div>
         <div className="lg:col-span-1 flex flex-col gap-4">
@@ -93,7 +93,7 @@ const Footer = () => {
           <div className="flex gap-10 lg:gap-5 items-center  justify-center">
             <a target="_blank" href="https://www.linkedin.com/in/arafa-webs-74a8b6367/"><FaLinkedin className="text-2xl hover:-translate-y-1 duration-200" /></a>
             <a target="_blank" href="https://www.facebook.com/people/Arafa-Webs/61577071787769/"><RiFacebookCircleFill className="text-3xl hover:-translate-y-1 duration-200" /></a>
-            <a target="_blank" href="https://www.instagram.com/arafawebs_official/"><RiInstagramLine className="text-3xl hover:-translate-y-1 duration-200" /></a>
+            <a target="_blank" href="https://www.instagram.com/arafawebs.official/"><RiInstagramLine className="text-3xl hover:-translate-y-1 duration-200" /></a>
             <a target="_blank" href="https://github.com/arafamaster001"><FaGithub className="text-2xl hover:-translate-y-1 duration-200" /></a>
             <a target="_blank" href="#"><RiTwitterXLine className="text-2xl hover:-translate-y-1 duration-200" /></a>
             <a target="_blank" href="#"><FaDiscord className="text-3xl hover:-translate-y-1 duration-200" /></a>
