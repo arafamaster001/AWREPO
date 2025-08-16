@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/page";
 // import SessionTracker from "./Components/SessionTracker";
 import { ToastContainer } from "react-toastify";
 import Script from "next/script";
+import SmoothScroll from "./Components/SmoothScroll/SmoothScroll";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,7 +18,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
 export const metadata = {
   title: "Arafa Webs | Custom Websites & E-commerce Solutions",
   description:
@@ -53,7 +53,18 @@ export default function RootLayout({ children }) {
       />
 
       {/* Facebook Pixel noscript fallback */}
-      <noscript>
+      
+
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <ToastContainer />
+        <Header />
+        <SmoothScroll>
+        {children}
+        </SmoothScroll>
+        <Footer />
+        <noscript>
         <img
           height="1"
           width="1"
@@ -61,16 +72,6 @@ export default function RootLayout({ children }) {
           src="https://www.facebook.com/tr?id=1293654462190092&ev=PageView&noscript=1"
         />
       </noscript>
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ToastContainer />
-        <Header />
-        {/* <SessionTracker /> */}
-        {/* <GoogleAnalytics /> */}
-        {children}
-        <Footer />
       </body>
     </html>
   );

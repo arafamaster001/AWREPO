@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 :root {
@@ -28,6 +28,13 @@ body {
   height: 100%;
   margin: 0;
   background-color: #000000 !important;
+  /* overflow: hidden; */
+}
+
+.lenis-container {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .para {

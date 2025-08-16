@@ -15,6 +15,7 @@ export function middleware(request) {
     "/booking",
     "/image-sitemap",
     "/sitemap",
+    "/contact",
   ];
 
   // Allow static assets and internal Next.js paths
